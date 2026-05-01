@@ -4,6 +4,7 @@ import jobData from '../data/job_data.json';
 import Accordion from './Accordion';
 import SoldierDetail from './SoldierDetail';
 import CareerPath from './CareerPath';
+import { Link } from 'react-router-dom';
 
 const HeroMatch = ({ hero, sharedQualities = [], keywordLabelMap = {}, userKeywordIds = [] }) => {
   if (!hero || !hero.message_content) return null;
@@ -85,7 +86,7 @@ const HeroMatch = ({ hero, sharedQualities = [], keywordLabelMap = {}, userKeywo
             </button>
           </div>
           <div className="cta-block">
-            <a href="/quiz/1" className="cta-secondary">
+            <Link to="/quiz/1" className="cta-secondary">
               <span className="cta-secondary-text">RETAKE THE QUIZ</span>
               <span className="cta-secondary-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
@@ -93,7 +94,7 @@ const HeroMatch = ({ hero, sharedQualities = [], keywordLabelMap = {}, userKeywo
                   <path d="M18.9269 23.3166L25.7039 15.9996L18.9269 8.68262L17.6579 9.87062L22.6259 15.1896H7.04688V16.8366H22.6259L17.6579 22.1556L18.9269 23.3166Z" fill="#ffcc01"></path>
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
