@@ -32,12 +32,6 @@
     text-align: left;
 }
 
-@media (min-width: 1024px) {
-    [data-component=herosoldierdetail] .herosoldierdetail__content {
-        padding-bottom:45px
-    }
-}
-
 [data-component=herosoldierdetail] .herosoldierdetail__content p a:hover {
     --tw-text-opacity: 1;
     color: #221F20;
@@ -107,10 +101,10 @@
 
 [data-component=herosoldierdetail] .herosoldierdetail__name {
     margin-bottom: 18px;
-    margin-top: 18px;
+    margin-top: 0px;
     text-align: left;
     font-family: 'GI-530', Arial, sans-serif;
-    line-height: 55px;
+    line-height: 48px;
     color: #221F20;
     text-transform: none;
 }

@@ -86,7 +86,7 @@ const ResultsPage = () => {
   }
 
   return (
-    <div className="results-page" style={{ padding: 45 }}>
+    <div className="results-page">
       {bestHero ? (
         <>
           <HeroMatch hero={bestHero} sharedQualities={[...new Set(bestShared)]} keywordLabelMap={keywordLabelMap} userKeywordIds={userKeywordIds} />

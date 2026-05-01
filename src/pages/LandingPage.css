@@ -1,4 +1,17 @@
 
+div.secondarycallout {
+    background: #221F20;
+
+    .cta-block .cta-primary {
+        border-color: #FFCC01;
+        color: #FFCC01;
+
+        svg path {
+            fill: #FFCC01;
+        }
+    }
+}
+
 [data-component=callout] {
     margin: 0;
     box-sizing: border-box;
@@ -114,10 +127,18 @@
 [data-component=callout][data-callout-type=secondary] .secondary-callout-heading {
     width: 100%;
     font-family: "GI-530", Arial, sans-serif;
+
+    h1 {
+        color: #FFCC01;
+    }
 }
 
 [data-component=callout][data-callout-type=secondary] .secondary-callout-heading-supporting-text {
     width: 100%;
+
+    p {
+        color: #FFFFFF;
+    }
 }
 
 [data-component=callout][data-callout-type=secondary] .secondary-callout-cta-container {

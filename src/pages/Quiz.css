@@ -1,8 +1,8 @@
 .q {
     position: relative;
     display: grid;
-    min-height: 100vh;
-    overflow: hidden;
+    min-height: auto;
+    overflow: visible;
     padding: 18px;
     --tw-text-opacity: 1;
     color: rgb(255 204 1 / var(--tw-text-opacity, 1))
@@ -39,7 +39,7 @@
 .q-flex {
     position: relative;
     display: flex;
-    height: 100%;
+    height: auto;
     max-width: 1200px;
     flex-direction: column;
     border: none;
@@ -62,7 +62,7 @@
 }
 .q-question { padding-top: 72px }
 @media (min-width: 768px) {
-    .q-question { padding-right:22.5px; padding-top: 207px }
+    .q-question { padding-right:22.5px; padding-top: 217px }
 }
 .q-choice {
     position: relative;
@@ -71,7 +71,7 @@
     padding-top: 45px
 }
 @media (min-width: 768px) {
-    .q-choice { padding-left:22.5px; padding-top: 207px }
+    .q-choice { padding-left:22.5px; padding-top: 217px }
 }
 
 legend {

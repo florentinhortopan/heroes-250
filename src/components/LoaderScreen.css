@@ -142,11 +142,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 628px;
   background: #181818;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  width: 100%;
+  height: auto;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 9999;

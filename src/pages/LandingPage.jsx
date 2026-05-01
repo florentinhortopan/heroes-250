@@ -29,7 +29,7 @@ const LandingPage = () => (
                 <span className="cta-primary-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
                     <title>arrow-animate</title>
-                    <path d="M18.9269 23.3166L25.7039 15.9996L18.9269 8.68262L17.6579 9.87062L22.6259 15.1896H7.04688V16.8366H22.6259L17.6579 22.1556L18.9269 23.3166Z" fill="#221F20"></path>
+                    <path d="M18.9269 23.3166L25.7039 15.9996L18.9269 8.68262L17.6579 9.87062L22.6259 15.1896H7.04688V16.8366H22.6259L17.6579 22.1556L18.9269 23.3166Z" fill="#FFCC01"></path>
                   </svg>
                 </span>
               </Link>
@@ -38,8 +38,8 @@ const LandingPage = () => (
         <div className="column-right w-full desktop:w-1/2">
           <div className="secondary-callout-image">
             <picture className="aspect-w-4 aspect-h-3">
-              <source media="(min-width: 375px)" srcSet="assets/main-image.jpg" />
-              <img src="assets/main-image.jpg" loading="lazy" alt="A group of Army Soldiers in a tent" />
+              <source media="(min-width: 375px)" srcSet="public/assets/main-image.jpg" />
+              <img src="public/assets/main-image.jpg" loading="lazy" alt="A group of Army Soldiers in a tent" />
             </picture>
           </div>
         </div>
