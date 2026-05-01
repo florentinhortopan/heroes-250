@@ -1,0 +1,796 @@
+[
+    {
+    "mos_title": "Infantryman Jobs",
+    "minimum_asvab_line_score": "Combat (CO): 77",
+    "mos_description_short": "In this job, you’ll train in the use of small arms, anti-tank, and other weapons systems. You will learn to capture, destroy, and repel enemy ground forces during missions.\n",
+    "MOS job overview": "As a first step toward becoming an Infantryman, you’ll train in the use of small arms, anti-tank, and other weapons systems. You will be responsible for capturing, destroying, and repelling enemy ground forces during missions. This is also the starting point for many advanced schools, such as Special Forces, Airborne School, Ranger School, Sniper School, and Pathfinder School.\n",
+    "position_type": "Enlisted",
+    "requirements": "• 22 weeks of Infantry One Station Unit Training\n• 77 ASVAB Score: Combat (CO)\n",
+    "Spanish_MOS Job Overview": "Como primer paso para ser Soldado de Infantería, te capacitarás en el uso de armas pequeñas, armas anti-tanques y otros sistemas de armas. Serás responsable de capturar, derrotar y repeler a las fuerzas terrestres enemigas durante las misiones. Este será también tu punto de partida para muchas escuelas especializadas como Special Forces, Airborne School, Ranger School, Sniper School, y Pathfinder School.",
+    "Spanish_skills": "Evasión\n\nFuerza física y mental\n\nManejo de armas\n",
+    "Spanish_requirements": "• 14 semanas de entrenamiento básico \n• 87 Puntuación ASVAB: Combat (CO)",
+    "related_civilian_jobs_espanol": "• Especialista en capacitación corporativa\n• Oficial de la ley\n• Trabajador de planta automotriz\n",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Remain calm under stress",
+      "Working as a team",
+      "readiness to accept challenge and danger",
+      "Tremendous discipline and high morale",
+      "Physically and Mentally fit to perform under pressure"
+    ],
+    "Basic Job Explanation": "Combat soldier ",
+    "Skills": [
+      "Evasion",
+      "Physical & Mental Strength",
+      "Weapons Operations"
+    ],
+    "Civilian Jobs Sort": [
+      "• Corporate Training Specialist",
+      "• Law Enforcement Officer",
+      "Auto Plant Worker"
+    ],
+    "group": "firearms-ammunition",
+    "category": "ground-forces",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Elegible para un bono de hasta $40,000 al enlistarse.",
+    "group_spanish": "armas-de-fuego-municiones",
+    "Spanish_category": "fuerzas-terrestres ",
+    "moscode": "11X",
+    "en_meta_description": "In this job, you’ll train in the use of small arms, anti-tank, and other weapons systems. You will learn to capture, destroy, and repel enemy ground forces during missions.",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11x-infantryman-jobs.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/ground-forces/firearms-ammunition/11x-infantryman-jobs.html",
+    "Bonuses (Summer 2021)": 9000,
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "No",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "ASVAB": "[{\n\"CO\" : 77\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "DEV URL": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "STG URL": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "PROD AUTH URL": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "DEV URL ES": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "STG URL ES": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "PROD AUTH URL ES": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/es/ground-forces/firearms-ammunition/11x-infantryman-jobs.html?wcmmode=disabled",
+    "Last Modified": "2026-03-19T15:30:15.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard"
+    ],
+    "certifications": 10,
+    "path": "11x-infantryman-jobs",
+    "TRADOC Schools copy": [
+      "rechkhN0jHS4u714O"
+    ],
+    "Changes": [
+      "Requirements- ASVAB Score"
+    ],
+    "Is there a Q2 Change?": true,
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/ground-forces/firearms-ammunition/11x-infantryman-jobs/",
+    "testing_requirements": [
+      "22 weeks of Infantry One Station Unit Training"
+    ],
+    "Priority": 930,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "A U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/fuerzas-terrestres/armas-de-fuego-municiones/11x-trabajos-de-soldado-de-infanteria/",
+    "Skills Icons": [
+      "Navigation",
+      "Strength",
+      "Weapons Training"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/ground-forces/firearms-ammunition/11x-infantryman-jobs",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/fuerzas-terrestres/armas-de-fuego-municiones/11x-trabajos-de-soldado-de-infanteria",
+    "id": "recWxkYq928dat6NS",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+    {
+    "mos_title": "Network Communication Systems Specialist",
+    "mos_description_short": "In this job, you’ll supervise network management functions while helping troubleshoot and reengineer associated network assets. You’ll also perform routine maintenance checks on assigned vehicles and equipment.\n",
+    "MOS job overview": "As a Network Communication Systems Specialist, you’ll be responsible for installing, repairing, and maintaining cabling and wiring, telecommunication systems, and network management facilities. You’ll install communications networks while helping troubleshoot and reengineer assets to support operational requirements and ensure communication systems are working. \n",
+    "position_type": "Enlisted",
+    "requirements": "10 weeks of Basic Training\n• 19 weeks of Advanced\nIndividual Training\n\n\n",
+    "Spanish_MOS Job Overview": "Como Especialista en Sistemas de Comunicaciones de Red, supervisarás el manejo de las funciones de la red y el centro de control de las redes integradas y los sistemas de comunicaciones multicanal.\nEsto incluye la instalación de fibra táctica y cableado, además de ayudar a solucionar problemas y reestructurar los activos de red relacionados, para apoyar los requisitos operativos. También darás mantenimiento rutinario a los vehículos asignados, a los generadores de energía y al equipamiento.\n\n",
+    "Spanish_skills": "Solución de problemas electrónicos\nMantenimiento y reparaciones\n",
+    "Spanish_requirements": "10 semanas de Basic Training\n• 19 semanas de Advanced Individual Training\n• 102 de puntuación ASVAB:\nElectronics (EL)\n• 105 de puntuación ASVAB: Skilled\nTechnical (ST)\n",
+    "Skills": [
+      "Electronic Troubleshooting",
+      "Maintenance & Repairs",
+      "Network Administration"
+    ],
+    "group": "languages-code",
+    "category": "signal-intelligence",
+    "bonus_status": "false",
+    "moscode": "25H",
+    "en_meta_description": "In this job, you’ll supervise network management functions while helping troubleshoot and reengineer associated network assets. You’ll also perform routine maintenance checks on assigned vehicles and equipment.",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/25h-network-communication-systems-specialist.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/signal-intelligence/languages-code/25h-network-communication-systems-specialist.html",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "ASVAB": "[{\n\"EL\" : 100,\n\"ST\" : 102\n}]",
+    "Last Modified": "2026-03-19T15:33:51.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 131,
+    "path": "25h-network-communication-systems-specialist",
+    "TRADOC Schools copy": [
+      "recIjOUW8GySrtETt"
+    ],
+    "Changes": [
+      "Meta Page Title (New MOS Name)",
+      "Q4 MOS Audit 2024"
+    ],
+    "Is there a Q2 Change?": true,
+    "Q2 Spanish Change?": true,
+    "Q2 Spanish Changes": [
+      "Meta Page Title (New MOS Name)"
+    ],
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/signal-intelligence/languages-code/25h-network-communication-systems-specialist/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "19 weeks of Advanced Individual Training"
+    ],
+    "Priority": 850,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "U.S. Citizen",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns",
+      "Eligible for a Secret Security Clearance"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/senales-inteligencia/idiomas-codigo/25h-especialista-en-sistemas-de-comunicaciones-de-red/",
+    "Skills Icons": [
+      "Electronic Troubleshooting",
+      "Maintenance",
+      "Globe"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/signal-intelligence/languages-code/25h-network-communication-systems-specialist",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/señales-inteligencia/idiomas-código/25h-especialista-en-sistemas-de-comunicaciones-de-red",
+    "id": "recwiQFRHMUrjqTMo",
+    "createdAt": "2023-05-10T19:21:52.000Z"
+  },
+  {
+    "mos_title": "Combat Medic Specialist",
+    "minimum_asvab_line_score": "Skilled Technical (ST): 101, General Technical (GT): 107",
+    "mos_description_short": "In this job, you'll administer emergency medical care in the field in both combat and humanitarian situations, and train other soldiers first responder procedures. \n",
+    "MOS job overview": "As a Combat Medic Specialist, you’ll deliver emergency medical care in high-pressure situations, from accidents and natural disasters to military training and operations. You’ll assess injuries, stabilize patients, and make critical medical decisions under extreme conditions. You’ll also train other Soldiers in first aid and provide ongoing medical support on base.\n",
+    "position_type": "Enlisted",
+    "requirements": "• 10 weeks of Basic Training \n• 16 weeks of Advanced Individual Training\n• 101 ASVAB Score: Skilled Technical (ST)\n• 107 ASVAB Score: General Technical (GT)\n",
+    "Spanish_MOS Job Overview": "Como Médico Especialista de Combate, darás atención médica de emergencia en el campo de operaciones, tanto en situaciones de combate como humanitarias. Tu entrenamiento te permitirá dar primeros auxilios y clasificar enfermedades y lesiones para salvar vidas, tal como lo hace un paramédico en el mundo civil. También entrenarás a otros Soldados en cursos de salvamento/primeros auxilios y darás atención en la base cuando no haya despliegues. ",
+    "Spanish_skills": "Cuidado médico de emergencia \n\nCuidado al paciente \n\nInstrucción y capacitación ",
+    "Spanish_requirements": "• 10 semanas de entrenamiento básico\n• 16 semanas de entrenamiento individual avanzado\n• 101 Puntuación ASVAB: Skilled Technical (ST)\n• 107 Puntuación ASVAB: General Technical (GT)",
+    "related_civilian_jobs_espanol": "• Técnico médico (EMT) / paramédico \n• Asistente médico / quirúrgico \n• Enfermero en salud pública ",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Enjoy helping and caring for others ",
+      "Communicate Effectively ",
+      "Remain calm under stress",
+      "High attention to detail (tinkerer) "
+    ],
+    "Basic Job Explanation": "Emergency care/first responder ",
+    "COOL URL": "https://www.cool.osd.mil/army/enlisted/68w.htm",
+    "Skills": [
+      "Emergency Care",
+      "Patient Care",
+      "Instructing & Training"
+    ],
+    "Icon sorting": [
+      "Medical Cross",
+      "Band-aid",
+      "Megaphone"
+    ],
+    "Civilian Jobs Sort": [
+      "• EMT / Paramedic",
+      "Medical/Surgical Assistant",
+      "Public Health Nurse"
+    ],
+    "group": "intensive-care",
+    "category": "science-medicine",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Elegible para un bono de hasta $15,000 al enlistarse.",
+    "group_spanish": "cuidado-intensivo",
+    "Spanish_category": "ciencia-medicina ",
+    "moscode": "68W",
+    "en_meta_description": "In this job, you'll administer emergency medical care in the field in both combat and humanitarian situations, and train other soldiers first responder procedures. ",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html",
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "Yes ",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "(ASVAB SCORE) AND": true,
+    "ASVAB": "[{\n\"ST\" : 101\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "DEV URL": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "STG URL": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "DEV URL ES": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "STG URL ES": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL ES": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "Last Modified": "2026-03-31T14:45:45.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 68,
+    "path": "68w-combat-medic-specialist",
+    "Branches and Schools": [
+      "recno2XMipIG1JuBn"
+    ],
+    "TRADOC Schools copy": [
+      "reccEFFGYlRwJcc7Z"
+    ],
+    "Changes": [
+      "Q4 MOS Audit 2024",
+      "ACASP"
+    ],
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/science-medicine/intensive-care/68w-combat-medic-specialist/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "16 weeks of Advanced Individual Training"
+    ],
+    "Priority": 910,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "Be a U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet qualifications to work in a medical setting",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/ciencia-medicina/cuidado-intensivo/68w-medico-especialista-de-combate/",
+    "Skills Icons": [
+      "Emergency Care",
+      "Patient Care",
+      "Whistle"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/science-medicine/intensive-care/68w-combat-medic-specialist",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/ciencia-medicina/cuidado-intensivo/68w-medico-especialista-de-combate",
+    "additional_details": "The Army Civilian Acquired Skills Program (ACASP) can reduce the length of your initial training and streamline your assignment process so you can start your Army career sooner. Prior skills or experience relating to this career may put you in position to join the Army at a higher rank, earn more pay, and obtain leadership positions quicker. Work with a recruiter to get started.",
+    "id": "rec9vGO8vLwu7kdXQ",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+  {
+    "mos_title": "UH-60 Helicopter Repairer/Aircrew Member",
+    "minimum_asvab_line_score": "Mechanical Maintenance (MM): 104",
+    "mos_description_short": "In this job, you'll repair and maintain UH-60 (\"Black Hawk\") Helicopters.\n",
+    "MOS job overview": "As a UH-60 Helicopter Repairer/Aircrew Member, you’ll maintain and fix UH-60 \"Black Hawk\" helicopters, making sure they are safe and ready to fly for hundreds of Army missions. You’ll also perform and supervise inspections, prepare aircraft maintenance forms and records, supervise inspections, and ensure themost stringent standards are met to accomplish essential flight missions.\n",
+    "position_type": "Enlisted",
+    "requirements": "• 10 weeks of Basic Training \n• 15 weeks of Advanced Individual Training\n• 104 ASVAB Score: Mechanical Maintenance (MM)\n",
+    "Spanish_MOS Job Overview": "Como Reparador del Helicóptero UH-60, serás experto de los sistemas mecánicos y del exterior e interior del legendario “Black Hawk”. Obtendrás experiencia en desmontaje y reconstrucción de motores, reparación de fuselajes/revestimientos de aluminio, acero y fibra de vidrio, y del mantenimiento de los sistemas hidráulico y de combustible y eléctrico, para que cada helicóptero esté listo para su función. ",
+    "Spanish_skills": "Operaciones de aviación \n\nMantenimiento mecánico \n\nElectrónica y mecánica  ",
+    "Spanish_requirements": "• 10 semanas de entrenamiento básico\n• 15 semanas de entrenamiento individual avanzado\n• 104 Puntuación ASVAB: Mechanical Maintenance (MM)",
+    "related_civilian_jobs_espanol": "• Mecánico y técnico de aeronaves\n• Mecánico de vehículos y equipo pesado\n• Trabajador de mantenimiento de carreteras y maquinaria",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Interest in machines and mechanics ",
+      "Interest in working with aircrafts",
+      "Working with hands"
+    ],
+    "Basic Job Explanation": "Helicopter mechanic ",
+    "COOL URL": "https://www.cool.osd.mil/army/enlisted/15t.htm",
+    "Skills": [
+      "Aviation Operations",
+      "Mechanical Maintenance",
+      "Electronic & Mechanical"
+    ],
+    "Civilian Jobs Sort": [
+      "• Aircraft Mechanic & Technician",
+      "• Heavy Equipment & Vehicle Mechanic",
+      "• Highway Maintenance and Machinery Worker"
+    ],
+    "group": "repairing-aircraft",
+    "category": "aviation",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Ninguno",
+    "group_spanish": "reparación-de-aeronaves",
+    "Spanish_category": "aviación",
+    "moscode": "15T",
+    "en_meta_description": "In this job, you'll repair and maintain UH-60 (\"Black Hawk\") Helicopters.",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15t-uh-60-helicopter-repairer.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/aviation/repairing-aircraft/15t-uh-60-helicopter-repairer.html",
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "Yes ",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "ASVAB": "[{\n\"MM\" : 104\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "Last Modified": "2025-05-02T18:39:51.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 52,
+    "path": "15t-uh-60-helicopter-repairer",
+    "Branches and Schools": [
+      "recALKc7LCwHXCa4J"
+    ],
+    "TRADOC Schools copy": [
+      "recsFxohCQ4lYXEgQ"
+    ],
+    "Changes": [
+      "Certifications #",
+      "Q4 MOS Audit 2024"
+    ],
+    "Is there a Q2 Change?": true,
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/aviation/repairing-aircraft/15t-uh-60-helicopter-repairer/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "15 weeks of Advanced Individual Training"
+    ],
+    "Priority": 210,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "A U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns",
+      "Eligible for a Secret Security Clearance"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/aviacion/reparacion-de-aeronaves/15t-reparador-del-helicoptero-uh-60/",
+    "Skills Icons": [
+      "Helicopter",
+      "Maintenance",
+      "Circuit"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/aviation/repairing-aircraft/15t-uh-60-helicopter-repairer",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/aviación/reparación-de-aeronaves/15t-reparador-del-helicoptero-uh-60",
+    "id": "recUYBmTG7pU8VCAL",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+  {
+    "mos_title": "Petroleum Supply Specialist",
+    "minimum_asvab_line_score": "Clerical (CL): 86, Operators & Food (OF): 85\n",
+    "mos_description_short": "In this job, you’ll supply the Army with the fuel it needs to maintain a state of readiness at all times. You’ll supervise and manage the reception, storage, and shipping of bulk or packaged petroleum-based products. \n",
+    "MOS job overview": "As a Petroleum Supply Specialist, you’ll supply the Army with the fuel it needs to maintain a state of readiness at all times. You’ll supervise and manage the reception, storage, and shipping of bulk or packaged petroleum-based products. You’ll oversee its use, dispense it to various vehicles and aircraft, and make sure it is being transported and handled safely. You will learn how refueling systems and equipment are assembled sequentially, perform quality assurance, and you’ll supply and store fuel from a variety of sources. \n",
+    "position_type": "Enlisted",
+    "requirements": "• 10 weeks of Basic Training \n• 11 weeks of Advanced Individual Training\n• 86 ASVAB Score: Clerical (CL)\n• 85 ASVAB Score: Operators & Food (OF)\n",
+    "Spanish_MOS Job Overview": "Como Especialista de Suministro de Petróleo, proporcionarás el combustible que el Army necesita para estar listo a cualquier hora. Supervisarás y manejarás la recepción, conservación y distribución de grandes cantidades de productos o productos a base de petróleo envasados.  Vigilarás su uso, lo suministrarás a varios vehículos y aeronaves, y garantizarás que se maneje y transporte de manera segura. Aprenderás cómo se ensamblan secuencialmente los sistemas y equipos de reabastecimiento de combustible, te encargarás del control de calidad, y lo suministrarás y conservarás desde una variedad de fuentes.",
+    "Spanish_skills": "Sistemas de reabastecimiento de combustible\n\nMecánica de taller\n\nPlanificación y programación\n",
+    "Spanish_requirements": "• 10 semanas de entrenamiento básico \n• 11 semanas de entrenamiento individual avanzado \n• 86 Puntuación ASVAB: Clerical (CL)\n• 85 Puntuación ASVAB: Operators & Food (OF)",
+    "related_civilian_jobs_espanol": "\n• Especialista en reabastecimiento de combustible de aeronaves\n• Operador del sistema de bomba de refinería petrolera\n• Gerente de distribución\n",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Interest in machines and mechanics ",
+      "Enjoy physical work",
+      "Keep accurate records",
+      "Interest in warehouse and shipping procedures"
+    ],
+    "Basic Job Explanation": "Supervise shipping and storage of fuel",
+    "COOL URL": "https://www.cool.osd.mil/army/enlisted/92f.htm",
+    "Skills": [
+      "Operating Refueling Systems",
+      "Shop Mechanics",
+      "Planning & Scheduling"
+    ],
+    "Icon sorting": [
+      "Engine",
+      "Chart/Calendar"
+    ],
+    "Civilian Jobs Sort": [
+      "• Aircraft Refueling Specialist",
+      "Oil Refinery Pump System Operator",
+      "• Warehouse Distribution Manager"
+    ],
+    "group": "transportation-inventory",
+    "category": "support-logistics",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Elegible para un bono de hasta $7,500 al enlistarse.",
+    "group_spanish": "gestionar-el-inventario-transporte",
+    "Spanish_category": "apoyo-logística ",
+    "moscode": "92F",
+    "en_meta_description": "In this job, you’ll supply the Army with the fuel it needs to maintain a state of readiness at all times. You’ll supervise and manage the reception, storage, and shipping of bulk or packaged petroleum-based products. ",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html",
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "Yes ",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "(ASVAB SCORE) AND": true,
+    "ASVAB": "[{\n\"CL\" : 89,\n\"OF\" : 85\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "DEV URL": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "STG URL": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "DEV URL ES": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "STG URL ES": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL ES": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/es/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html?wcmmode=disabled",
+    "Last Modified": "2026-03-19T15:35:59.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 31,
+    "path": "92f-petroleum-supply-specialist",
+    "Branches and Schools": [
+      "recWIUUYisQi5KIUk"
+    ],
+    "TRADOC Schools copy": [
+      "recOCH689GoW65c6r"
+    ],
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/support-logistics/transportation-inventory/92f-petroleum-supply-specialist/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "10 weeks of Advanced Individual Training"
+    ],
+    "Priority": 880,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "A U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/apoyo-logistica/gestionar-el-inventario-transporte/92f-especialista-de-suministro-de-petroleo/",
+    "Skills Icons": [
+      "Fuel",
+      "Engine",
+      "Calendar"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/support-logistics/transportation-inventory/92f-petroleum-supply-specialist",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/apoyo-logística/gestionar-el-inventario-transporte/92f-especialista-de-suministro-de-petroleo",
+    "additional_details": "The Army Civilian Acquired Skills Program (ACASP) can reduce the length of your initial training and streamline your assignment process so you can start your Army career sooner. Prior skills or experience relating to this career may put you in position to join the Army at a higher rank, earn more pay, and obtain leadership positions quicker. Work with a recruiter to get started.",
+    "id": "rec5ugflBx2WJyCzX",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+    {
+    "mos_title": "Intelligence Analyst",
+    "minimum_asvab_line_score": "Skilled Technical (ST): 101",
+    "mos_description_short": "In this job, you’ll be responsible for providing the Army with crucial and reliable information about enemy forces and potential areas of conflict. Additionally, you'll analyze and distribute tactical intelligence. \n",
+    "MOS job overview": "As an Intelligence Analyst, you’ll be responsible for providing the Army with crucial and reliable information about enemy forces and potential areas of conflict. You’ll analyze, assess, process, and distribute tactical intelligence, as well as create, document, organize, and cross-reference intelligence records and files.\n",
+    "position_type": "Enlisted",
+    "requirements": "• 10 weeks of Basic Training \n• 13 weeks of Advanced Individual Training\n• 101 ASVAB Score: Skilled Technical (ST)\n",
+    "Spanish_MOS Job Overview": "Como Analista de Inteligencia, serás responsable de dar al Army información crucial y confiable sobre las fuerzas enemigas y áreas posibles de conflicto. Analizarás, evaluarás, procesarás y distribuirás información táctica. También crearás, documentarás, organizarás y compararás registros y archivos de inteligencia. ",
+    "Spanish_skills": "Recopilación de información \n\nAnálisis de información \n\nRegistro de archivos  ",
+    "Spanish_requirements": "• 10 semanas de entrenamiento básico\n• 13 semanas de entrenamiento individual avanzado\n• 101 Puntuación ASVAB: Skilled Technical (ST)",
+    "related_civilian_jobs_espanol": "• Analista de inteligencia de negocios\n• Analista de ciberseguridad\n• Investigador criminal ",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Ability to apply technical and critical thinking skills",
+      "Communicate Effectively ",
+      "Analyze information and make decisions "
+    ],
+    "Basic Job Explanation": "Analyses and processes intelligence data",
+    "COOL URL": "https://www.cool.osd.mil/army/enlisted/35f.htm",
+    "Skills": [
+      "Intelligence Collection",
+      "Intelligence Gathering & Analysis",
+      "Record Keeping"
+    ],
+    "Icon sorting": [
+      "Locked File",
+      "thumbprint",
+      "Files"
+    ],
+    "Civilian Jobs Sort": [
+      "• Business Intelligence Analyst",
+      "Cyber Security Analyst",
+      "• Criminal Investigator"
+    ],
+    "group": "languages-code",
+    "category": "signal-intelligence",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Elegible para un bono de hasta $7,500 al enlistarse.",
+    "group_spanish": "idiomas-código",
+    "Spanish_category": "señales-inteligencia ",
+    "moscode": "35F",
+    "en_meta_description": "In this job, you’ll be responsible for providing the Army with crucial and reliable information about enemy forces and potential areas of conflict. Additionally, you'll analyze and distribute tactical intelligence. ",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35f-intelligence-analyst.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/signal-intelligence/languages-code/35f-intelligence-analyst.html",
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "Yes ",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "ASVAB": "[{\n\"ST\" : 101\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "DEV URL": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "STG URL": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "PROD AUTH URL": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "DEV URL ES": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "STG URL ES": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "PROD AUTH URL ES": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/es/signal-intelligence/languages-code/35f-intelligence-analyst.html?wcmmode=disabled",
+    "Last Modified": "2026-03-19T15:34:25.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 24,
+    "path": "35f-intelligence-analyst",
+    "Branches and Schools": [
+      "rec7oFXlAehdB9zhe"
+    ],
+    "TRADOC Schools copy": [
+      "recZis9vrsPRCu3tl"
+    ],
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/signal-intelligence/languages-code/35f-intelligence-analyst/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "13 weeks of Advanced Individual Training"
+    ],
+    "Priority": 860,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "U.S. Citizen",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/senales-inteligencia/idiomas-codigo/35f-analista-de-inteligencia/",
+    "Skills Icons": [
+      "Intelligence Collection",
+      "Fingerprint",
+      "Record Keeping"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/signal-intelligence/languages-code/35f-intelligence-analyst",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/señales-inteligencia/idiomas-código/35f-analista-de-inteligencia",
+    "id": "receHzXZhepemI1RG",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+    {
+    "mos_title": "Combat Medic Specialist",
+    "minimum_asvab_line_score": "Skilled Technical (ST): 101, General Technical (GT): 107",
+    "mos_description_short": "In this job, you'll administer emergency medical care in the field in both combat and humanitarian situations, and train other soldiers first responder procedures. \n",
+    "MOS job overview": "As a Combat Medic Specialist, you’ll deliver emergency medical care in high-pressure situations, from accidents and natural disasters to military training and operations. You’ll assess injuries, stabilize patients, and make critical medical decisions under extreme conditions. You’ll also train other Soldiers in first aid and provide ongoing medical support on base.\n",
+    "position_type": "Enlisted",
+    "requirements": "• 10 weeks of Basic Training \n• 16 weeks of Advanced Individual Training\n• 101 ASVAB Score: Skilled Technical (ST)\n• 107 ASVAB Score: General Technical (GT)\n",
+    "Spanish_MOS Job Overview": "Como Médico Especialista de Combate, darás atención médica de emergencia en el campo de operaciones, tanto en situaciones de combate como humanitarias. Tu entrenamiento te permitirá dar primeros auxilios y clasificar enfermedades y lesiones para salvar vidas, tal como lo hace un paramédico en el mundo civil. También entrenarás a otros Soldados en cursos de salvamento/primeros auxilios y darás atención en la base cuando no haya despliegues. ",
+    "Spanish_skills": "Cuidado médico de emergencia \n\nCuidado al paciente \n\nInstrucción y capacitación ",
+    "Spanish_requirements": "• 10 semanas de entrenamiento básico\n• 16 semanas de entrenamiento individual avanzado\n• 101 Puntuación ASVAB: Skilled Technical (ST)\n• 107 Puntuación ASVAB: General Technical (GT)",
+    "related_civilian_jobs_espanol": "• Técnico médico (EMT) / paramédico \n• Asistente médico / quirúrgico \n• Enfermero en salud pública ",
+    "Spanish_job_type": "Enlistado\nOficial \nServicio Activo \nReserva del Army\nGuardia Nacional del Army\nNivel Inicial",
+    "Legacy Soft Skills": [
+      "Enjoy helping and caring for others ",
+      "Communicate Effectively ",
+      "Remain calm under stress",
+      "High attention to detail (tinkerer) "
+    ],
+    "Basic Job Explanation": "Emergency care/first responder ",
+    "COOL URL": "https://www.cool.osd.mil/army/enlisted/68w.htm",
+    "Skills": [
+      "Emergency Care",
+      "Patient Care",
+      "Instructing & Training"
+    ],
+    "Icon sorting": [
+      "Medical Cross",
+      "Band-aid",
+      "Megaphone"
+    ],
+    "Civilian Jobs Sort": [
+      "• EMT / Paramedic",
+      "Medical/Surgical Assistant",
+      "Public Health Nurse"
+    ],
+    "group": "intensive-care",
+    "category": "science-medicine",
+    "bonus_status": "false",
+    "Spanish_bonus_text": "Elegible para un bono de hasta $15,000 al enlistarse.",
+    "group_spanish": "cuidado-intensivo",
+    "Spanish_category": "ciencia-medicina ",
+    "moscode": "68W",
+    "en_meta_description": "In this job, you'll administer emergency medical care in the field in both combat and humanitarian situations, and train other soldiers first responder procedures. ",
+    "url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html",
+    "spanish_url_path_legacy": "https://www.goarmy.com/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html",
+    "active_duty_component_type": "Yes",
+    "army_reserve_component_type": "Yes ",
+    "national_guard_component_type": "Yes",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time",
+      "part time"
+    ],
+    "(ASVAB SCORE) AND": true,
+    "ASVAB": "[{\n\"ST\" : 101\n}]",
+    "2022 Quick Ship Seasonal Bonus (QS/SB) 25,000": true,
+    "DEV URL": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "STG URL": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "DEV URL ES": "http://ec2-54-164-211-145.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "STG URL ES": "http://ec2-35-168-149-60.compute-1.amazonaws.com:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "PROD AUTH URL ES": "http://aem.usarec.army.mil:4502/content/goarmy/careers-and-jobs/career-match/es/science-medicine/intensive-care/68w-combat-medic-specialist.html?wcmmode=disabled",
+    "Last Modified": "2026-03-31T14:45:45.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty",
+      "Army National Guard",
+      "Army Reserve"
+    ],
+    "certifications": 68,
+    "path": "68w-combat-medic-specialist",
+    "Branches and Schools": [
+      "recno2XMipIG1JuBn"
+    ],
+    "TRADOC Schools copy": [
+      "reccEFFGYlRwJcc7Z"
+    ],
+    "Changes": [
+      "Q4 MOS Audit 2024",
+      "ACASP"
+    ],
+    "url_path_nextgen": "https://www.goarmy.com/careers-and-jobs/science-medicine/intensive-care/68w-combat-medic-specialist/",
+    "testing_requirements": [
+      "10 weeks of Basic Training",
+      "16 weeks of Advanced Individual Training"
+    ],
+    "Priority": 910,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "Be a U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet qualifications to work in a medical setting",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations"
+    ],
+    "spanish_url_path_nextgen": "https://www.goarmy.com/es/carreras-y-trabajos/ciencia-medicina/cuidado-intensivo/68w-medico-especialista-de-combate/",
+    "Skills Icons": [
+      "Emergency Care",
+      "Patient Care",
+      "Whistle"
+    ],
+    "english_url": "https://www.goarmy.com/careers-and-jobs/science-medicine/intensive-care/68w-combat-medic-specialist",
+    "spanish_url": "https://www.goarmy.com/careers-and-jobs/ciencia-medicina/cuidado-intensivo/68w-medico-especialista-de-combate",
+    "additional_details": "The Army Civilian Acquired Skills Program (ACASP) can reduce the length of your initial training and streamline your assignment process so you can start your Army career sooner. Prior skills or experience relating to this career may put you in position to join the Army at a higher rank, earn more pay, and obtain leadership positions quicker. Work with a recruiter to get started.",
+    "id": "rec9vGO8vLwu7kdXQ",
+    "createdAt": "2019-08-29T21:24:33.000Z"
+  },
+  {
+    "mos_title": "Field Artillery Recruit",
+    "mos_description_short": "In this job, you will train to use artillery weapons to destroy, neutralize, or suppress enemy forces using cannon, rocket, and missile fire.\n",
+    "MOS job overview": "As a Field Artillery Soldier, you will train to use artillery weapons to destroy, neutralize, or suppress enemy forces using cannon, rocket, and missile fire. Soldiers in this branch will be assigned as a [13B](https://www.goarmy.com/careers-and-jobs/ground-forces/explosives-artillery/13b-cannon-crewmember), [13F](https://www.goarmy.com/careers-and-jobs/ground-forces/explosives-artillery/13f-joint-fire-support-specialist), [13J](https://www.goarmy.com/careers-and-jobs/ground-forces/explosives-artillery/13j-fire-control-specialist), [13M](https://www.goarmy.com/careers-and-jobs/ground-forces/explosives-artillery/13m-rocket-system-crewmember), or [13R](https://www.goarmy.com/careers-and-jobs/ground-forces/explosives-artillery/13r-weapons-locating-radar-operator) based on available Army opportunities and skills assessed at Basic Combat Training. \n",
+    "position_type": "Enlisted",
+    "Skills": [
+      "Weapons Operations",
+      "Physical & Mental Strength",
+      "Calculating & Recording Data"
+    ],
+    "group": "explosives-artillery",
+    "category": "ground-forces",
+    "bonus_status": "true",
+    "moscode": "13U",
+    "en_meta_description": "In this job, you will train to use artillery weapons to destroy, neutralize, or suppress enemy forces using cannon, rocket, and missile fire.",
+    "entry_level_requirement": "true",
+    "hours": [
+      "full time"
+    ],
+    "ASVAB": "[{\n\"GT\" : 87\n}]",
+    "Last Modified": "2026-03-31T14:43:22.000Z",
+    "Last Modified By": {
+      "id": "usrjnvTOkWY19EyPB",
+      "email": "anne.mceldowney@criticalmass.com",
+      "name": "Anne McEldowney"
+    },
+    "Status": "Live on GoArmy",
+    "component": [
+      "Active Duty"
+    ],
+    "certifications": 0,
+    "path": "13u-field-artillery-recruit",
+    "bonus_amount": 13000,
+    "testing_requirements": [
+      "10 weeks of Basic Training ",
+      "6-10 weeks of Advanced Individual Training (AIT) dependent on MOS"
+    ],
+    "Priority": 920,
+    "Position Type Officer": "false",
+    "Position Type Enlisted": "true",
+    "Position Type Warrant Officer ": "false",
+    "Requirements2": [
+      "Be a U.S. Citizen or permanent resident with a valid Green Card",
+      "17 to 34 Years Old",
+      "High School Diploma or GED",
+      "Meet Tattoo Guidelines",
+      "No Major Law Violations",
+      "No Medical Concerns"
+    ],
+    "Skills Icons": [
+      "Weapons Training",
+      "Fitness",
+      "Data"
+    ],
+    "id": "reczjA7MkQgNREKq9",
+    "createdAt": "2024-11-20T21:53:03.000Z"
+  }
+]

@@ -1,0 +1,219 @@
+/* Ensure CTAs stack vertically with spacing */
+.cta-block {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+/* Secondary CTA: underlined text with right arrow */
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cta-secondary-text {
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 530;
+  color: #221F20;
+  border-bottom: 2px solid #221F20;
+  padding-bottom: 2px;
+  padding-right: 12px;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, border-color 0.2s;
+}
+.cta-secondary-icon {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.cta-secondary-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.cta-secondary-icon svg path {
+  fill: #221F20;
+  transition: fill 0.2s;
+}
+.cta-secondary:hover .cta-secondary-text,
+.cta-secondary:focus .cta-secondary-text {
+  color: #221F20;
+  border-color: #221F20;
+}
+.cta-secondary:hover .cta-secondary-icon svg path,
+.cta-secondary:focus .cta-secondary-icon svg path {
+  fill: #221F20;
+}
+/* Primary CTA button for HeroMatch */
+/* Updated CTA: gold outline, no background, gold text and arrow, no border radius */
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #221F20;
+  border: 2px solid #221F20;
+  border-radius: 0;
+  padding: 12px 28px;
+  margin-top: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.cta-primary:hover,
+.cta-primary:focus {
+  border-color: #221F20;
+  color: #221F20;
+}
+.cta-primary-text {
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 530;
+  letter-spacing: 0.04em;
+  color: inherit;
+}
+.cta-primary-icon {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.cta-primary-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.cta-primary-icon svg path {
+  fill: #221F20;
+  transition: fill 0.2s;
+}
+.cta-primary:hover .cta-primary-icon svg path,
+.cta-primary:focus .cta-primary-icon svg path {
+  fill: #221F20;
+}
+@import url('../pages/fonts.css');
+/* HeroMatch (AEM-style) component styles */
+/* Prevent horizontal overflow */
+/* Responsive HeroMatch layout, inspired by SoldierDetail */
+.hero.hero-secondary {
+  width: 100%;
+  position: relative;
+  min-height: 254px;
+  padding: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  color: #221F20;
+  text-align: left;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .hero.hero-secondary {
+    flex-direction: row;
+    column-gap: 2.5rem;
+    min-height: 586px;
+    column-gap: 2.5rem;
+    padding: 45px;
+  }
+}
+.hero-secondary .column-left {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .hero-secondary .column-left {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero.hero-secondary {
+    padding: 5rem;
+  }
+}
+@media (min-width: 1600px) {
+  .hero.hero-secondary {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+.hero-secondary .column-right .hero-heading {
+  margin-bottom: 1rem;
+  color: #221F20;
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 530;
+  margin-top: 0;
+}
+.hero-secondary .column-left p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+.hero-secondary .column-right p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+.hero-secondary .column-right {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  .hero-secondary .column-right {
+    width: 50%;
+  }
+}
+.hero-secondary .cmp-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+h3 {
+  color: #221F20;
+  margin-bottom: 1rem;
+  font-size: 27px;
+  font-weight: 530;
+  font-family: 'GI-530', Arial, sans-serif;
+}
+h4 {
+  margin-top: 0;
+}
+
+[data-component="icon-list"] {
+  margin-top: 25px;
+}
+
+.icon-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.icon-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.icon-list .icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.icon-list .icon svg rect {
+  stroke: #221F20;
+}
+.icon-list .icon svg path {
+  fill: #221F20;
+}
+.icon-list li p {
+  margin: 0;
+  color: #221F20;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}

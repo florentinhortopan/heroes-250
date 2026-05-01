@@ -1,0 +1,247 @@
+{
+  "heroes": [
+    {
+      "id": "dsampson",
+      "conflict": "Revolutionary War",
+      "rank": "Private",
+      "name": "Deborah Sampson",
+      "last_name": "Sampson",
+      "location": "Massachusetts",
+      "time_period": "1780s",
+      "matched_mos": "11X",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/deborah_sampson.jpg",
+      "image_alt": "Profile photo of Deborah Sampson",
+      "achievement": "Fought valiantly disguised as a man in the Revolutionary War",
+      "bio": "In the 1780s, when women were not allowed to serve in the military, Deborah Sampson disguised herself as a man and enlisted under the name Robert Shurtleff. She fought valiantly in battles against the British and served in the elite Light Infantry unit, known for their speed and toughness. Sampson's dedication was further exemplified when she sustained an injury. To avoid being discovered, she removed a bullet from her own leg with a knife, without any anesthesia. Eventually, a doctor discovered her true identity. Instead of facing punishment, Sampson was awarded a military pension, recognizing her service and sacrifice.",
+      "medium_bio": "Deborah Sampson disguised herself as a man to enlist in the Continental Army during the 1780s, serving under the name Robert Shurtleff. She fought in multiple battles and was part of the elite Light Infantry unit known for its speed and toughness. After being wounded, she removed a bullet from her own leg to avoid discovery. Her identity was eventually revealed, but instead of punishment, she was honorably recognized with a military pension for her service and sacrifice.",
+      "keywords": [
+        { "id": "courage" },
+        { "id": "resilience" },
+        { "id": "duty" }
+      ],
+      "message_content": {
+        "shortened_bio": "disguised herself as a man and fought fearlessly for American independence, removing a bullet from her own leg to avoid being discovered.",
+        "strength": "overcome obstacles",
+        "value": "serve something bigger than yourself",
+        "traits": ["courage", "determination"],
+        "legacy": "break barriers and defend their country"
+      }
+    },
+    {
+      "id": "gbanker",
+      "conflict": "World War I",
+      "rank": "",
+      "name": "Grace Banker",
+      "last_name": "Banker",
+      "location": "New Jersey",
+      "time_period": "1910s",
+      "matched_mos": "25H",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/grace_banker.jpg",
+      "image_alt": "Profile photo of Grace Banker",
+      "achievement": "Distinguished Service Award, \"Hello Girls\" Lead Operator",
+      "bio": "Grace Banker, a distinguished member of the U.S. Army Signal Corps during World War I, was born in Passaic, New Jersey. After attending Barnard College in New York City, she worked as a telephone operator for the American Telephone and Telegraph Company, quickly rising to the position of switchboard instructor due to her exceptional communication skills. In December 1917, Banker responded to an ad from the U.S. Army Signal Corps seeking bilingual women switchboard operators, and her experience led to her selection as the leader of the \"Hello Girls.\" Following training, Banker and her team were deployed to Chaumont, France, to serve at Gen. John J. Pershing's headquarters. After five months, she transferred to the First Army headquarters at Ligny-en-Barrois as chief operator, where her team played a crucial role in the assault on St. Mihiel by managing communications, including sending, decoding, and intercepting messages. Banker and the Hello Girls also served at Bar-le-Duc, supporting the Meuse-Argonne Offensive. At the height of the war, they connected 150,000 calls a day. When the Armistice was signed on November 11, 1918, Banker expressed disbelief, noting the challenges of maintaining communication lines. Post-war, Banker worked at President Woodrow Wilson's temporary French residence during the Treaty of Versailles talks, later joining the occupying forces in Coblenz, Germany, until 1920. Grace Banker's legacy as a leader and pioneer in military communications is remembered with great respect. Her courage and competence were integral to the American effort in World War I, and she received a Distinguished Service Award for her contributions, one of only 18 Signal Corps members to be so honored. Despite this recognition, Banker and the Hello Girls were initially ineligible for Veterans' benefits. Banker passed away in December 1960. In 1977, President Jimmy Carter signed legislation granting Veteran status to the female members of the Signal Corps.",
+      "medium_bio": "Grace Banker led the \"Hello Girls,\" a group of bilingual telephone operators in the U.S. Army Signal Corps during World War I. She and her team managed communications for General Pershing’s headquarters and later supported major offensives like St. Mihiel and Meuse-Argonne. At peak operations, they connected up to 150,000 calls a day. Banker received the Distinguished Service Award, though she and her peers were not granted veteran status until decades later.",
+      "keywords": [
+        { "id": "leadership" },
+        { "id": "problem_solving" },
+        { "id": "collaboration" }
+      ],
+      "message_content": {
+        "shortened_bio": "led the elite 'Hello Girls' telephone operators, connecting 150,000 calls a day and becoming one of only 18 Signal Corps members to receive the Distinguished Service Award.",
+        "strength": "lead with precision",
+        "value": "connect people and systems that save lives",
+        "traits": ["intelligence", "leadership"],
+        "legacy": "pioneer a path"
+      }
+    },
+    {
+      "id": "yokim",
+      "conflict": "World War II",
+      "rank": "Colonel",
+      "name": "Young-Oak Kim",
+      "last_name": "Kim",
+      "location": "California",
+      "time_period": "1940s-1970s",
+      "matched_mos": "11X",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/young-oak_kim.jpg",
+      "image_alt": "Profile photo of Colonel Young-Oak Kim",
+      "achievement": "Distinguished Service Cross",
+      "bio": "Young Oak Kim was drafted into the Army in January 1941 and graduated from Officer Candidate School in February 1943. He was assigned as the second platoon leader of Company B, 100th Infantry Battalion (Separate), a segregated unit composed mainly of Japanese American Soldiers, or Nisei, from Hawaii. The 100th Infantry earned the nickname \"the Purple Heart Battalion\" due to the high casualties sustained during the Italian campaign. Kim earned his first Silver Star and Purple Heart for his actions near Santa Maria Oliveto. At Anzio, Italy, Kim led a daring raid, capturing two enemy soldiers and securing critical intelligence that contributed to the liberation of Rome in June 1944. For his bravery, he was awarded the Distinguished Service Cross. After Italy, Kim and the 100th Infantry, now part of the 442nd Regimental Combat Team, fought in France, securing the towns of Bruyères and Biffontaine. Kim was wounded at Biffontaine and sent back to California to recover. Kim was awarded his second Purple Heart and the French Croix de Guerre for his service. U.S. Senator Daniel Inouye of Hawaii, who served with Kim in the 442nd, said, \"Capt. Kim was a bona fide hero…a fearless leader who, through his deeds, inspired his men.\" Kim left the Army after World War II, but rejoined in 1950 when the Korean War broke out. In 1951, he served with the 31st Infantry of the 7th Infantry Division and commanded a South Korean guerrilla unit and participated in the United Nations Forces' final drive into North Korea, earning his second Silver Star. He was promoted to major, becoming the first Asian American to command a battalion in combat. He was promoted to colonel in 1965, and retired from the Army in 1972. Over his career, he earned 19 medals, including honors from Italy, France and Korea. Kim passed away from cancer on December 29, 2005, at the age of 86. Col. Young Oak Kim's legacy of courage, leadership, and service continues to inspire generations of Soldiers and Americans.",
+      "medium_bio": "Young-Oak Kim served as a leader in the 100th Infantry Battalion, a segregated unit of Japanese American soldiers during World War II. He demonstrated exceptional bravery in Italy, capturing enemy soldiers and securing intelligence that contributed to the liberation of Rome. After continuing to serve in France, he later rejoined the Army for the Korean War, where he commanded a guerrilla unit. Over his career, he earned 19 medals and became one of the most decorated Asian American officers in U.S. history.",
+      "keywords": [
+        { "id": "leadership" },
+        { "id": "courage" },
+        { "id": "strategic_thinking" }
+      ],
+      "message_content": {
+        "shortened_bio": "led the 100th Infantry Battalion, a segregated unit of Japanese American Soldiers, with fearless leadership and strategic brilliance, earning the Distinguished Service Cross for his actions in Italy.",
+        "strength": "push through barriers",
+        "value": "fight for your teammates and your principles",
+        "traits": ["perseverance", "leadership"],
+        "legacy": "transform prejudice into respect through excellence"
+      }
+    },
+    {
+      "id": "rbenavidez",
+      "conflict": "Vietnam War",
+      "rank": "Master Sergeant",
+      "name": "Roy Benavidez",
+      "last_name": "Benavidez",
+      "location": "Texas",
+      "time_period": "1960s",
+      "matched_mos": "68W",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/roy_benavidez.jpg",
+      "image_alt": "Profile photo of Master Sergeant Roy Benavidez",
+      "achievement": "Medal of Honor Recipient",
+      "bio": "Master Sgt. Roy P. Benavidez, born on Aug. 5, 1935, in Cuero, Texas, epitomized the Warrior Ethos throughout his life and military career. Raised by his aunt and uncle after losing his parents at a young age, Benavidez joined the Texas National Guard at 17 and later transitioned to active duty, serving in South Korea and Germany before becoming a Military Police officer. In 1965, Benavidez deployed to Vietnam with the 82nd Airborne Division. After a severe injury from a land mine left him paralyzed, he defied medical expectations by regaining his ability to walk and returned to active duty. He completed Special Forces training and was assigned to the 5th Special Forces Group. On May 2, 1968, while returning from Catholic Mass, then-Staff Sgt. Benavidez heard a distress call over the radio. His comrade, Sgt. 1st Class LeRoy Wright, was part of a 12-man team under attack by a North Vietnamese Army battalion near Loc Ninh, Cambodia. Outnumbered nearly 100 to 1, the team had already seen three helicopters fail in rescue attempts. Without hesitation, Benavidez grabbed an aid bag and armed only with a combat knife, boarded the next helicopter. Unable to land, Benavidez jumped from the helicopter into what he later described as \"six hours in hell.\" Shortly after landing, he was shot in the leg and struck by grenade shrapnel in the head and face while running to the team's position. Upon meeting the team, he reorganized the forces, stabilized the wounded and armed himself with an AK-47. He signaled for extraction and led the walking wounded to the helicopters, continuing to suppress enemy fire. While directing the men to evacuate was shot in the stomach and received further shrapnel wounds from a grenade, as the pilot of one of the helicopters was killed and the helicopter overturned. Benavidez immediately moved to a crash site, reorganized survivors into a defensive position, and called in air support. Although wounded and administering first aid, he made trips to move his comrades to safety and ensure no classified material was left behind. On one run, he was clubbed and bayoneted by an enemy soldier, whom he killed with his knife and continued to protect the helicopter pilot. After a final check, he finally allowed himself to be pulled into a helicopter to be evacuated. Sustaining 37 wounds, he was presumed dead and placed in a body bag. Unable to move or speak, he mustered the last of his strength to spit in a doctor's face and indicate he was alive. After over a year in hospitals, Benavidez recovered and was awarded the Distinguished Service Cross. As the Army believed there were no eyewitnesses to his account, a requirement at the time, he was not given the Medal of Honor. On Feb. 24, 1981, President Ronald Reagan upgraded his award to the Medal of Honor after an eyewitness account was found. Benavidez retired in 1976 and dedicated his post-military life to mentoring youth and advocating for veterans' benefits. He passed away on Nov. 29, 1998, and was buried at Fort Sam Houston National Cemetery in San Antonio, Texas.",
+      "medium_bio": "Roy Benavidez overcame a devastating injury that initially left him paralyzed, returning to active duty through sheer determination. In Vietnam, he responded to a distress call and entered an intense six-hour battle to rescue a trapped Special Forces team. Despite sustaining 37 wounds, he organized defenses, treated the injured, and evacuated survivors under heavy fire. His actions ultimately earned him the Medal of Honor after an eyewitness account confirmed his extraordinary heroism.",
+      "keywords": [
+        { "id": "resilience" },
+        { "id": "duty" },
+        { "id": "courage" }
+      ],
+      "message_content": {
+        "shortened_bio": "defied the odds by surviving 37 wounds and saving his comrades during a harrowing six-hour battle in Vietnam, earning the Medal of Honor for his extraordinary heroism.",
+        "strength": "act with heroism",
+        "value": "protect those who cannot protect themselves",
+        "traits": ["courage", "sacrifice"],
+        "legacy": "risk everything to save their fellow soldiers"
+      }
+    },
+    {
+      "id": "mnovosel",
+      "conflict": "World War II, Vietnam War",
+      "rank": "Chief Warrant Officer",
+      "name": "Michael Novosel",
+      "last_name": "Novosel",
+      "location": "Pennsylvania",
+      "time_period": "1940s-1970s",
+      "matched_mos": "15T",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/michael_novosel.jpg",
+      "image_alt": "Profile photo of Chief Warrant Officer Michael Novosel",
+      "achievement": "Medal of Honor Recipient",
+      "bio": "Chief Warrant Officer 4 Michael J. Novosel Sr., born in Etna, Pennsylvania, on Sept. 3, 1922, exemplified the spirit of service and sacrifice throughout his storied military career. The son of Yugoslavian immigrants, Novosel joined the Army Air Corps in 1941, seeking to repay the nation that welcomed his family. Despite initial administrative assignments, he became a skilled aviator, flying B-24 Liberators and B-29 Superfortresses during World War II. His missions included four combat operations in the Pacific, participation in the historic formation over the USS Missouri during Japan's surrender and missions dropping supplies to U.S. prisoners in the war's immediate aftermath. In 1947 Novosel transferred to the newly formed Air Force and returned to the United States. He married his childhood sweetheart, Ethel Mae Graham, and would go on to have four children. Caught in the force reduction, he was discharged in 1950. Finding himself not suited to civilian life, he would rejoin the Air Force in a noncombat role in Korea in 1951 and after the conclusion of the conflict joined the Air Force Reserve. Novosel would attempt to rejoin the active-duty Air Force but was denied. So, in 1964, he joined the Army to help alleviate its need for combat helicopter pilots. Novosel served in Vietnam as a medevac pilot with a dustoff unit in the 283rd Medical Detachment, arriving in country in 1966, returned home, but would go back to Vietnam to serve with a dustoff unit with the 82nd Medical Detachment in 1969. On Oct. 2, 1969, he undertook a daring mission, flying into enemy fire 15 times to rescue 29 wounded soldiers. Despite sustaining injuries, Novosel's unwavering courage and skill saved lives, earning him the Medal of Honor, presented by President Richard Nixon in 1971. Novosel's legacy includes over 2,500 missions and the evacuation of nearly 5,600 personnel. His service inspired generations, including his son, who flew alongside him in Vietnam — the two became the first father/son duo of the war to fly together in the same combat unit. Novosel said he had to rescue his son's unit once, only to have the rescue reciprocated a week later. Fort Novosel, Alabama, was renamed in his honor in 2023, later returning to the name Fort Rucker in 2025, named in honor of Distinguished Service Cross recipient Capt. Edward W. Rucker for extraordinary heroism in World War I. Novosel's legacy is a testament to his contributions to Army aviation and his embodiment of the Army's values of loyalty, duty, and selfless service. Novosel passed away in 2006 and is buried in Arlington National Cemetery.",
+      "medium_bio": "Michael Novosel began his career as a pilot in World War II, flying bomber missions in the Pacific. After later joining the Army, he became a medevac helicopter pilot during the Vietnam War, completing over 2,500 missions. On a single day, he flew into enemy fire 15 times to rescue wounded soldiers, saving 29 lives. His courage and dedication earned him the Medal of Honor and cemented his legacy in Army aviation.",
+      "keywords": [
+        { "id": "adaptability" },
+        { "id": "duty" },
+        { "id": "courage" }
+      ],
+      "message_content": {
+        "shortened_bio": "flew over 2,500 missions and saved nearly 5,600 lives as a medevac pilot in Vietnam, earning the Medal of Honor for his extraordinary heroism.",
+        "strength": "stay calm",
+        "value": "perform under extreme pressure",
+        "traits": ["selflessness", "valor"],
+        "legacy": "save lives by soaring into danger itself"
+      }
+    },
+    {
+      "id": "agregg",
+      "conflict": "Vietnam War",
+      "rank": "Lieutenant General",
+      "name": "Arthur J. Gregg",
+      "last_name": "Gregg",
+      "location": "Virginia",
+      "time_period": "1940s-1980s",
+      "matched_mos": "92F",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/arthur_gregg.jpg",
+      "image_alt": "Profile photo of Lieutenant General Arthur J. Gregg",
+      "achievement": "Army Logistics Leader",
+      "bio": "Lt. Gen. Arthur J. Gregg had a distinguished career in the U.S. Army, marked by exceptional leadership and a commitment to excellence. He began his military journey in 1946, enlisting in a segregated Army and quickly rising through the ranks due to his dedication and skill to become an officer and a premier logistician. Gregg was a trailblazer as the first Black Army officer to reach the rank of lieutenant general and he was the namesake of an Army logistics award. He served in various significant roles, including as an instructor at the Quartermaster Leadership School at Fort Lee, Virginia, where he shaped the next generation of Army leaders. His operational experience was further enhanced during his deployment to Vietnam, where he commanded one of the Army's largest battalions in Vietnam, the 96th Quartermaster Direct Support Battalion, later renamed the 96th Supply and Service Battalion, out of Fort Riley, Kansas. He was tasked with overseeing critical logistics operations that were vital to mission success. Under his leadership, the battalion was awarded the Meritorious Unit Citation, and he was awarded the Legion of Merit for their outstanding effort. In 1973, he took over as the commander of the then-European Exchange System, greatly expanding the breadth of goods and services over his 2 years until he became Deputy Chief of Staff for Logistics for the United States Army Europe and Seventh Army. On April 1, 1976, he was promoted to Major General. In 1977, President Carter chose him to serve as director of logistics for the Joint Chiefs of Staff and achieved the rank of lieutenant general, where he played a crucial role in modernizing Army logistics and improving operational efficiency across the force. His last assignment came in 1979 as the Army's deputy chief of staff for logistics until he retired on July 24, 1981. In recognition of his contributions, Fort Lee was renamed Fort Gregg-Adams in 2023, honoring his impact on the Army and his commitment to service. Additionally, the Lieutenant General Arthur J. Gregg Sustainment Leadership Award was established to recognize outstanding leaders in Army logistics, reflecting his enduring influence on the field. Gregg's legacy is characterized by his ability to inspire others and his dedication to the Army's mission. His passing in August 2024 at the age of 96 was commemorated by a memorial service attended by over 3,000 Soldiers, highlighting the respect and admiration he earned throughout his life. His contributions continue to resonate within the Army, serving as a model of dedication, integrity, and leadership for future generations. On April 27, 2023, he became the first living person in recent memory to have an Army installation bear his name. Fort Gregg-Adams in Virginia was renamed to honor his servant leadership, strategic vision and barrier-breaking career.",
+      "medium_bio": "Arthur J. Gregg rose through the ranks after enlisting in a segregated Army, eventually becoming the first Black officer to reach lieutenant general. He built a reputation as a premier logistician, leading large-scale supply operations in Vietnam and modernizing Army logistics systems. Gregg also served in key leadership roles, including Director of Logistics for the Joint Chiefs of Staff. His impact was so significant that an Army installation was later named in his honor during his lifetime.",
+      "keywords": [
+        { "id": "leadership" },
+        { "id": "problem_solving" },
+        { "id": "strategic_thinking" }
+      ],
+      "message_content": {
+        "shortened_bio": "broke barriers as the first Black Army officer to reach lieutenant general, revolutionizing logistics and earning the Legion of Merit for his leadership in Vietnam.",
+        "strength": "solve complex challenges",
+        "value": "ensure every soldier has what they need to succeed",
+        "traits": ["integrity", "determination"],
+        "legacy": "build systems that keep the entire Army moving forward"
+      }
+    },
+    {
+      "id": "jlafayette",
+      "conflict": "Revolutionary War",
+      "rank": "",
+      "name": "James Armistead Lafayette",
+      "last_name": "Lafayette",
+      "location": "Virginia",
+      "time_period": "1780s",
+      "matched_mos": "35F",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/james_lafayette.jpg",
+      "image_alt": "Profile photo of James Armistead Lafayette",
+      "achievement": "Continental Army Spy",
+      "bio": "James Armistead Lafayette was an enslaved man who served as a spy for the Continental Army during the Revolutionary War. Posing as a runaway slave, he infiltrated British camps and gathered critical intelligence. His reports played a key role in the American victory at Yorktown. After the war, with support from Marquis de Lafayette, he gained his freedom and took Lafayette’s last name in honor of his service.",
+      "medium_bio": "James Armistead Lafayette served as a spy for the Continental Army during the Revolutionary War, infiltrating British forces under the guise of a runaway slave. He gathered and relayed critical intelligence that contributed directly to the American victory at Yorktown. After the war, he gained his freedom with support from Marquis de Lafayette. His work demonstrated the power of intelligence and strategic thinking in warfare.",
+      "keywords": [
+        { "id": "strategic_thinking" },
+        { "id": "problem_solving" },
+        { "id": "courage" }
+      ],
+      "message_content": {
+        "shortened_bio": "risked his life as a spy behind enemy lines, delivering intelligence that helped secure victory at Yorktown.",
+        "strength": "think strategically under pressure",
+        "value": "use intelligence to outmaneuver challenges",
+        "traits": ["resourcefulness", "courage"],
+        "legacy": "shape outcomes through insight, not just force"
+      }
+    },
+    {
+      "id": "mwalker",
+      "conflict": "Civil War",
+      "rank": "Surgeon",
+      "name": "Dr. Mary E. Walker",
+      "last_name": "Walker",
+      "location": "New York",
+      "time_period": "1860s",
+      "matched_mos": "68W",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/mary_walker.jpg",
+      "image_alt": "Profile photo of Dr. Mary E. Walker",
+      "achievement": "Medal of Honor Recipient",
+      "bio": "Dr. Mary E. Walker was a pioneering surgeon during the Civil War and the only woman to receive the Medal of Honor. She volunteered her medical services and treated wounded soldiers on the battlefield. Captured by Confederate forces, she spent months as a prisoner of war before being released. Her dedication to saving lives and breaking barriers made her one of the most remarkable figures of her time.",
+      "medium_bio": "Dr. Mary E. Walker served as a surgeon during the Civil War, providing medical care to wounded soldiers on the battlefield. She volunteered her services before being officially appointed and later endured capture as a prisoner of war. Despite these challenges, she continued her work after being released. She became the only woman to receive the Medal of Honor, recognized for both her service and perseverance.",
+      "keywords": [
+        { "id": "duty" },
+        { "id": "resilience" },
+        { "id": "courage" }
+      ],
+      "message_content": {
+        "shortened_bio": "served as a battlefield surgeon and became the only woman awarded the Medal of Honor for her courage and care.",
+        "strength": "care for others under pressure",
+        "value": "serve and protect life",
+        "traits": ["compassion", "resilience"],
+        "legacy": "break barriers while saving lives"
+      }
+    },
+    {
+      "id": "acushing",
+      "conflict": "Civil War",
+      "rank": "First Lieutenant",
+      "name": "Alonzo Cushing",
+      "last_name": "Cushing",
+      "location": "Wisconsin",
+      "time_period": "1860s",
+      "matched_mos": "13U",
+      "image_src": "https://www.army.mil/e2/images/rv7/heroes/profiles/alonzo_cushing.jpg",
+      "image_alt": "Profile photo of Alonzo Cushing",
+      "achievement": "Medal of Honor Recipient at Gettysburg",
+      "bio": "First Lieutenant Alonzo Cushing commanded an artillery battery during the Battle of Gettysburg. Positioned at Cemetery Ridge, his unit faced a massive Confederate assault during Pickett’s Charge. Despite suffering severe wounds, Cushing continued directing artillery fire and refused to leave his post. His leadership played a critical role in repelling the attack, though he was ultimately killed in action.",
+      "medium_bio": "Alonzo Cushing commanded an artillery battery during the Battle of Gettysburg, holding a critical position on Cemetery Ridge. Even after being severely wounded, he continued directing his unit’s fire during Pickett’s Charge. His determination helped repel the Confederate assault at a pivotal moment in the battle. He was later awarded the Medal of Honor for his extraordinary bravery and leadership.",
+      "keywords": [
+        { "id": "courage" },
+        { "id": "leadership" },
+        { "id": "duty" }
+      ],
+      "message_content": {
+        "shortened_bio": "held his position at Gettysburg despite fatal wounds, leading artillery fire during one of the Civil War’s most critical moments.",
+        "strength": "lead under extreme pressure",
+        "value": "stand your ground when it matters most",
+        "traits": ["bravery", "commitment"],
+        "legacy": "hold the line when everything is on the line"
+      }
+    }
+  ]
+}

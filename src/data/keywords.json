@@ -1,0 +1,44 @@
+{
+    "keyword_options": [
+    { "id": "courage", "label": "Courage & Risk-Taking" },
+    { "id": "resilience", "label": "Resilience & Perseverance" },
+    { "id": "duty", "label": "Duty & Commitment" },
+    { "id": "leadership", "label": "Leadership & Influence" },
+    { "id": "problem_solving", "label": "Problem-Solving & Innovation" },
+    { "id": "collaboration", "label": "Collaboration & Teamwork" },
+    { "id": "strategic_thinking", "label": "Strategic Thinking" },
+    { "id": "adaptability", "label": "Adaptability" }
+  ],
+    "career_category": {
+      "science-medicine": {
+        "id": "science-medicine",
+        "label": "Science & Medicine",
+        "copy": "you’re responsible for protecting lives, making high-stakes decisions, and delivering care in fast-moving, unpredictable environments."
+      },
+      "aviation": {
+        "id": "aviation",
+        "label": "Aviation & Aerial Defense",
+        "copy": "precision, quick thinking, and confidence under pressure are essential to operating and protecting aircraft in complex missions."
+      },
+      "support-logistics": {
+        "id": "support-logistics",
+        "label": "Support & Logistics",
+        "copy": "planning, coordination, and problem-solving ensure that people, equipment, and resources are exactly where they need to be."
+      },
+      "ground-forces": {
+        "id": "ground-forces",
+        "label": "Ground Forces",
+        "copy": "leadership, resilience, and decisive action are required to operate effectively in high-pressure, on-the-ground environments."
+      },
+      "signal-intelligence": {
+        "id": "signal-intelligence",
+        "label": "Signal & Intelligence",
+        "copy": "analyzing information, thinking strategically, and staying ahead of evolving situations drive mission success."
+      },
+      "mechanics-engineering": {
+        "id": "mechanics-engineering",
+        "label": "Mechanics & Engineering",
+        "copy": "technical expertise and problem-solving keep systems running and ensure missions can move forward without interruption."
+      }
+    }
+}

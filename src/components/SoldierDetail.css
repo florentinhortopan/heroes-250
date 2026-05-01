@@ -1,0 +1,217 @@
+/* Float hero image left, make it smaller, and wrap text */
+[data-component=herosoldierdetail] .herosoldierdetail__image-float {
+    float: left;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__image-float {
+        width: 72px;
+        height: 72px;
+        margin-right: 12px;
+    }
+}
+[data-component=herosoldierdetail] {
+    position: relative;
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: #221F20;
+    padding: 27px 18px;
+    text-align: left;
+}
+
+@media (min-width: 1024px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__content {
+        padding-bottom:45px
+    }
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__content p a:hover {
+    --tw-text-opacity: 1;
+    color: #221F20;
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__alignment-wrapper {
+    display: flex;
+    min-height: 254px;
+    flex-direction: column;
+    gap: 18px
+}
+
+@media (min-width: 768px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__alignment-wrapper {
+        min-height:586px;
+        flex-direction: column
+    }
+}
+
+@media (min-width: 1024px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__alignment-wrapper {
+        gap:45px
+    }
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__content-container {
+    display: flex;
+    flex-direction: column
+}
+
+@media (min-width: 768px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__content-container {
+        width:100%
+    }
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__rank {
+    display: flex;
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__rank-icon {
+    display: grid;
+    width: 54px;
+    place-items: center;
+    border-width: 1px;
+    border-right-width: 0px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: #221F20;
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__rank-headline {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    flex-grow: 1;
+    border-width: 1px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: #221F20;
+    padding: 18px;
+    font-size: 14px;
+    font-weight: 530;
+    font-family: 'GI-530', Arial, sans-serif;
+    margin: 0;
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__name {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    text-align: left;
+    font-family: 'GI-530', Arial, sans-serif;
+    line-height: 55px;
+    color: #221F20;
+}
+
+[data-component=herosoldierdetail] [data-component=cta][data-type=inline].herosoldierdetail__army-component-name {
+    margin-bottom: 27px;
+    font-size: .875rem;
+    text-decoration-line: none
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__description {
+    margin-top: 27px;
+    margin-bottom: 27px
+}
+
+@media (min-width: 768px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__details {
+        margin-bottom:-27px;
+        display: grid;
+        grid-auto-flow: column;
+        -moz-column-gap: 36px;
+        column-gap: 36px
+    }
+}
+
+@media (min-width: 1024px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__details {
+        -moz-column-gap:66px;
+        column-gap: 66px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__details {
+        grid-template-columns:repeat(auto-fill,minmax(calc(50% - 18px),1fr))
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__details {
+        grid-template-columns:repeat(auto-fill,minmax(calc(50% - 33px),1fr))
+    }
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__details dt {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 21px
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__details dd {
+    margin-bottom: 27px;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 27px
+}
+
+[data-component=herosoldierdetail] .herosoldierdetail__details dd:last-child {
+    margin-bottom: 0
+}
+
+@media (min-width: 768px) {
+    [data-component=herosoldierdetail] .herosoldierdetail__details :nth-child(4n-3),[data-component=herosoldierdetail] .herosoldierdetail__details :nth-child(4n-2) {
+        grid-column-start:1
+    }
+
+    [data-component=herosoldierdetail] .herosoldierdetail__details :nth-child(4n-1),[data-component=herosoldierdetail] .herosoldierdetail__details :nth-child(4n) {
+        grid-column-start: 2
+    }
+}
+
+[data-component=herosoldierdetail] .cmp-container,[data-component=herosoldierdetail] .picture-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    [data-component=herosoldierdetail] .picture-container {
+        display: flex;
+        flex-direction: row;
+        width:100%
+    }
+}
+
+[data-component=herosoldierdetail] {
+    --tw-text-opacity: 1;
+    color: #221F20;
+}
+
+
+
+
+
+[data-component=herosoldierdetail] .herosoldierdetail__content, .herosoldierdetail__rank-headline,[data-component=herosoldierdetail] .herosoldierdetail__rank-icon, .herosoldierdetail__content, .herosoldierdetail__rank-headline,[data-component=herosoldierdetail] .herosoldierdetail__rank-icon {
+    --tw-border-opacity: 1;
+    border-color: #221F20;
+}
+
+[data-component=herosoldierdetail].bg-black .herosoldierdetail__rank-icon path {
+    fill: #221F20
+}
+
+

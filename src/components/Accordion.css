@@ -1,0 +1,38 @@
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.accordion {
+  margin-bottom: 0.5rem;
+  border-top: 1px solid #221F20;
+  overflow: hidden;
+}
+.accordion__summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background: none;
+  user-select: none;
+}
+.accordion__icon-right {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+.accordion__subheading h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.accordion__body {
+  padding: 1rem 1.25rem;
+}
+.rte {
+  font-size: 1rem;
+  color: #222;
+}

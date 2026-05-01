@@ -1,0 +1,58 @@
+.career-path-section {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.career-path-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.career-path-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #221F20;
+  text-align: left;
+}
+.career-path-heading {
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: #ffcc01;
+  margin-bottom: 1rem;
+}
+.career-path-body {
+  font-size: 1.15rem;
+  color: #fff;
+  line-height: 1.6;
+}
+.career-path-job-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  .career-path-content {
+    gap: 1.5rem;
+    padding: 32px 8px;
+  }
+  .career-path-copy, .career-path-job-card {
+    padding: 0;
+    justify-content: center;
+  }
+  .career-path-job-card {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .career-path-heading {
+    font-family: 'GI-530', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #ffcc01;
+    margin-bottom: 1rem;
+  }
+  .career-path-body {
+    font-size: 1.15rem;
+    color: #fff;
+    line-height: 1.6;
+  }
+}

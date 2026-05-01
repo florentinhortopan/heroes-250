@@ -1,0 +1,108 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "When facing a tough challenge, what's your instinct?",
+      "options": [
+        {
+          "id": "q1a",
+          "text": "Take action, even if it’s risky",
+          "keyword": { "id": "courage" }
+        },
+        {
+          "id": "q1b",
+          "text": "Stay committed and push through",
+          "keyword": { "id": "resilience" }
+        },
+        {
+          "id": "q1c",
+          "text": "Think through the best solution",
+          "keyword": { "id": "problem_solving" }
+        },
+        {
+          "id": "q1d",
+          "text": "Step back and assess the situation",
+          "keyword": { "id": "strategic_thinking" }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "What role do you naturally take on in a group?",
+      "options": [
+        {
+          "id": "q2a",
+          "text": "Lead from the front",
+          "keyword": { "id": "leadership" }
+        },
+        {
+          "id": "q2b",
+          "text": "Support the mission no matter what",
+          "keyword": { "id": "duty" }
+        },
+        {
+          "id": "q2c",
+          "text": "Keep everyone aligned and moving",
+          "keyword": { "id": "collaboration" }
+        },
+        {
+          "id": "q2d",
+          "text": "Adjust based on what’s needed",
+          "keyword": { "id": "adaptability" }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "How do you handle uncertainty or change?",
+      "options": [
+        {
+          "id": "q3a",
+          "text": "Stay steady and keep going",
+          "keyword": { "id": "resilience" }
+        },
+        {
+          "id": "q3b",
+          "text": "Adapt quickly and shift direction",
+          "keyword": { "id": "adaptability" }
+        },
+        {
+          "id": "q3c",
+          "text": "Analyze the situation before acting",
+          "keyword": { "id": "strategic_thinking" }
+        },
+        {
+          "id": "q3d",
+          "text": "Take bold action despite the unknown",
+          "keyword": { "id": "courage" }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "What kind of legacy do you want to leave?",
+      "options": [
+        {
+          "id": "q4a",
+          "text": "Being known for stepping up when others wouldn’t",
+          "keyword": { "id": "courage" }
+        },
+        {
+          "id": "q4b",
+          "text": "Serving something bigger than yourself",
+          "keyword": { "id": "duty" }
+        },
+        {
+          "id": "q4c",
+          "text": "Leading and inspiring others to succeed",
+          "keyword": { "id": "leadership" }
+        },
+        {
+          "id": "q4d",
+          "text": "Solving problems that make a real impact",
+          "keyword": { "id": "problem_solving" }
+        }
+      ]
+    }
+  ]
+}
