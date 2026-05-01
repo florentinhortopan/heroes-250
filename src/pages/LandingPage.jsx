@@ -38,8 +38,8 @@ const LandingPage = () => (
         <div className="column-right w-full desktop:w-1/2">
           <div className="secondary-callout-image">
             <picture className="aspect-w-4 aspect-h-3">
-              <source media="(min-width: 375px)" srcSet="public/assets/main-image.jpg" />
-              <img src="public/assets/main-image.jpg" loading="lazy" alt="A group of Army Soldiers in a tent" />
+              <source media="(min-width: 375px)" srcSet="assets/main-image.jpg" />
+              <img src="assets/main-image.jpg" loading="lazy" alt="A group of Army Soldiers in a tent" />
             </picture>
           </div>
         </div>
