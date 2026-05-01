@@ -1,0 +1,119 @@
+.q {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 18px;
+    --tw-text-opacity: 1;
+    color: rgb(255 204 1 / var(--tw-text-opacity, 1))
+}
+@media (min-width: 1024px) {
+    .q { padding:45px }
+}
+.q-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 1;
+    filter: var(--tw-blur);
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    background: #221F20;
+}
+
+.quiz-bg {
+    background-image: url('/content/dam/goarmy/CMT/quiz/army-drone.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.results-content {
+    position: relative;
+    z-index: 1;
+    padding: 45px;
+}
+.q-flex {
+    position: relative;
+    display: flex;
+    height: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    border: none;
+}
+@media (min-width: 768px) {
+    .q-flex { flex-direction:row }
+}
+.q-back {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center
+}
+.q-back .q-svg { margin-right: 18px }
+.q-svg { height: 32px; width: 32px }
+.q-svg svg path { fill: #ffcc01 }
+.q-question,.q-choice { display: flex }
+@media (min-width: 768px) {
+    .q-question,.q-choice { height:100%; flex: 1 1 0% }
+}
+.q-question { padding-top: 72px }
+@media (min-width: 768px) {
+    .q-question { padding-right:22.5px; padding-top: 207px }
+}
+.q-choice {
+    position: relative;
+    flex: 1 1 0%;
+    flex-direction: column;
+    padding-top: 45px
+}
+@media (min-width: 768px) {
+    .q-choice { padding-left:22.5px; padding-top: 207px }
+}
+
+legend {
+    font-size: 36px;
+    font-weight: 530;
+    font-family: "GI-530", Arial, sans-serif;
+    text-align: left;
+    line-height: 45px;
+}
+
+.q-button {
+    margin-bottom: 18px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 2px;
+    border-color: rgb(255 255 255 / 1);
+    padding: 18px;
+    text-align: left;
+    font-weight: 500;
+    color: rgb(255 255 255 / 1);
+    opacity: 1;
+    background: none;
+    cursor: pointer;
+    transition: all .15s cubic-bezier(.4,0,.2,1);
+}
+.q-button:hover, .q-button.q-active {
+    background-color: rgb(255 255 255 / 1);
+    color: rgb(34 31 32 / 1);
+}
+.q-circle {
+    display: none;
+    height: 20px;
+    width: 20px
+}
+.q-circle svg {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: rgb(34 31 32 / 1)
+}
+.q-circle path { stroke: #fff }
+.q-active .q-circle { visibility: visible; display: block }
+.q-active span { flex: .95 }

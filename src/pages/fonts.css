@@ -1,0 +1,43 @@
+/* GI Font Face Declarations */
+@font-face {
+  font-family: 'GI-400';
+  src: url('../fonts/G.I.-400.ttf') format('truetype'),
+       url('../fonts/G.I.-400.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GI-400Italic';
+  src: url('../fonts/G.I.-400Italic.ttf') format('truetype'),
+       url('../fonts/G.I.-400Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GI-530';
+  src: url('../fonts/G.I.-530.ttf') format('truetype'),
+       url('../fonts/G.I.-530.otf') format('opentype');
+  font-weight: 530;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GI-530Italic';
+  src: url('../fonts/G.I.-530Italic.ttf') format('truetype'),
+       url('../fonts/G.I.-530Italic.otf') format('opentype');
+  font-weight: 530;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GI-750';
+  src: url('../fonts/G.I.-750.ttf') format('truetype'),
+       url('../fonts/G.I.-750.otf') format('opentype');
+  font-weight: 750;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GI-750Italic';
+  src: url('../fonts/G.I.-750Italic.ttf') format('truetype'),
+       url('../fonts/G.I.-750Italic.otf') format('opentype');
+  font-weight: 750;
+  font-style: italic;
+}

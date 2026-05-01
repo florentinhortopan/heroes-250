@@ -112,6 +112,7 @@
     font-family: 'GI-530', Arial, sans-serif;
     line-height: 55px;
     color: #221F20;
+    text-transform: none;
 }
 
 [data-component=herosoldierdetail] [data-component=cta][data-type=inline].herosoldierdetail__army-component-name {
