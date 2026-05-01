@@ -5,10 +5,10 @@ import quizData from '../data/quiz_data.json';
 import { QuizContext } from '../state/QuizContext';
 import './Quiz.css';
 
-import Q1 from '../assets/Q1.jpg';
-import Q2 from '../assets/Q2.jpg';
-import Q3 from '../assets/Q3.jpg';
-import Q4 from '../assets/Q4.jpg';
+import Q1 from '../../public/assets/Q1.jpg';
+import Q2 from '../../public/assets/Q2.jpg';
+import Q3 from '../../public/assets/Q3.jpg';
+import Q4 from '../../public/assets/Q4.jpg';
 
 const quizBackgrounds = [Q1, Q2, Q3, Q4];
 
