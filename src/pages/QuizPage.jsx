@@ -29,10 +29,20 @@ const QUIZ_LENGTH_DEFAULT = 6;
 const MIN_QUIZ_LENGTH = 3;
 const MAX_QUIZ_LENGTH = 10;
 const QUIZ_LENGTH_STORAGE_KEY = 'quizLength';
+const QUIZ_ANSWERS_DEFAULT = 4;
+const MIN_QUIZ_ANSWERS = 2;
+const MAX_QUIZ_ANSWERS = 6;
+const QUIZ_ANSWERS_STORAGE_KEY = 'quizAnswers';
 
 function clampLength(n) {
   if (!Number.isFinite(n)) return null;
   if (n < MIN_QUIZ_LENGTH || n > MAX_QUIZ_LENGTH) return null;
+  return Math.floor(n);
+}
+
+function clampAnswers(n) {
+  if (!Number.isFinite(n)) return null;
+  if (n < MIN_QUIZ_ANSWERS || n > MAX_QUIZ_ANSWERS) return null;
   return Math.floor(n);
 }
 
@@ -45,16 +55,45 @@ function readQuizLength() {
       window.sessionStorage?.setItem(QUIZ_LENGTH_STORAGE_KEY, String(fromUrl));
       return fromUrl;
     }
-    const fromSession = clampLength(
-      parseInt(window.sessionStorage?.getItem(QUIZ_LENGTH_STORAGE_KEY) || '', 10),
-    );
-    if (fromSession) return fromSession;
   } catch {
     // sessionStorage / URL access can throw in some embedded contexts; fall through.
   }
   const fromEnv = clampLength(parseInt(import.meta.env?.VITE_QUIZ_LENGTH || '', 10));
   if (fromEnv) return fromEnv;
+  try {
+    const fromSession = clampLength(
+      parseInt(window.sessionStorage?.getItem(QUIZ_LENGTH_STORAGE_KEY) || '', 10),
+    );
+    if (fromSession) return fromSession;
+  } catch {
+    // ignore sessionStorage read errors
+  }
   return QUIZ_LENGTH_DEFAULT;
+}
+
+function readQuizAnswers() {
+  if (typeof window === 'undefined') return QUIZ_ANSWERS_DEFAULT;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = clampAnswers(parseInt(params.get('answers') || '', 10));
+    if (fromUrl) {
+      window.sessionStorage?.setItem(QUIZ_ANSWERS_STORAGE_KEY, String(fromUrl));
+      return fromUrl;
+    }
+  } catch {
+    // sessionStorage / URL access can throw in some embedded contexts; fall through.
+  }
+  const fromEnv = clampAnswers(parseInt(import.meta.env?.VITE_QUIZ_ANSWERS || '', 10));
+  if (fromEnv) return fromEnv;
+  try {
+    const fromSession = clampAnswers(
+      parseInt(window.sessionStorage?.getItem(QUIZ_ANSWERS_STORAGE_KEY) || '', 10),
+    );
+    if (fromSession) return fromSession;
+  } catch {
+    // ignore sessionStorage read errors
+  }
+  return QUIZ_ANSWERS_DEFAULT;
 }
 
 const ArrowLeftSVG = () => (
@@ -72,13 +111,33 @@ const CheckMarkSVG = () => (
   </svg>
 );
 
-function fallbackQuestion(historyLength) {
+function fallbackQuestion(historyLength, answerCount = 4) {
   // First static question as a graceful fallback if the API call fails.
   const fb = quizFallback.questions[Math.min(historyLength, quizFallback.questions.length - 1)];
   if (!fb) return null;
+  const options = fb.options || [];
+  const count = Math.max(1, Math.min(answerCount, options.length));
+  // If a reduced answer count is requested, pick evenly across the list so
+  // options remain clearly different (avoid taking only the first N).
+  const indices = [];
+  if (count === options.length) {
+    for (let i = 0; i < options.length; i += 1) indices.push(i);
+  } else {
+    for (let i = 0; i < count; i += 1) {
+      const idx = Math.min(options.length - 1, Math.floor((i * options.length) / count));
+      if (!indices.includes(idx)) indices.push(idx);
+    }
+    // In rare collisions, fill from left to right until we have count items.
+    for (let i = 0; indices.length < count && i < options.length; i += 1) {
+      if (!indices.includes(i)) indices.push(i);
+    }
+  }
   return {
     question: fb.question,
-    options: fb.options.map((o) => ({ id: o.id, text: o.text, keyword: o.keyword.id })),
+    options: indices.map((idx) => {
+      const o = options[idx];
+      return { id: o.id, text: o.text, keyword: o.keyword.id };
+    }),
   };
 }
 
@@ -116,6 +175,7 @@ const QuizPage = () => {
   // Resolve once per mount so query-param toggles are honored on entry but
   // don't drift mid-quiz if the URL changes for any reason.
   const QUIZ_LENGTH = useMemo(readQuizLength, []);
+  const QUIZ_ANSWERS = useMemo(readQuizAnswers, []);
   const MIN_QUESTIONS = QUIZ_LENGTH;
   const MAX_QUESTIONS = QUIZ_LENGTH;
 
@@ -154,6 +214,7 @@ const QuizPage = () => {
           // user through different life contexts, not five variants of the
           // same prompt.
           seenScenarios,
+          optionCount: QUIZ_ANSWERS,
           minQuestions: MIN_QUESTIONS,
           maxQuestions: MAX_QUESTIONS,
         }),
@@ -161,7 +222,10 @@ const QuizPage = () => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const hasContent =
-        data && data.question && Array.isArray(data.options) && data.options.length >= 4;
+        data &&
+        data.question &&
+        Array.isArray(data.options) &&
+        data.options.length >= QUIZ_ANSWERS;
       if (data.done) {
         setDone(true);
         setCurrent(null);
@@ -183,7 +247,7 @@ const QuizPage = () => {
     } catch (err) {
       console.warn('next-question failed, using fallback', err);
       setQuizError(err?.message || 'Unable to reach quiz API');
-      const fb = fallbackQuestion(currentHistory.length);
+      const fb = fallbackQuestion(currentHistory.length, QUIZ_ANSWERS);
       if (fb) {
         setCurrent(fb);
         setSelectedOptionId(null);
