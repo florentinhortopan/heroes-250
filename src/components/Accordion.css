@@ -12,25 +12,49 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 1rem 1.25rem;
+  padding: 1rem 0.5rem 1rem 0;
   font-weight: 600;
   outline: none;
   border: none;
   background: none;
   user-select: none;
+  list-style: none;
+  line-height: 1;
 }
+.accordion__summary::-webkit-details-marker { display: none; }
+.accordion__summary::marker { content: ''; }
 .accordion__icon-right {
-  margin-right: 1rem;
-  display: flex;
+  margin-right: 0.75rem;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20px;
+  transition: transform 200ms ease;
+  transform-origin: 50% 50%;
+}
+.accordion__icon-right .icon,
+.accordion__icon-right svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+details[open] > .accordion__summary .accordion__icon-right {
+  transform: rotate(180deg);
+}
+.accordion__subheading {
+  display: inline-flex;
   align-items: center;
 }
 .accordion__subheading h3 {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 .accordion__body {
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 0 1.25rem 0;
 }
 .rte {
   font-size: 1rem;

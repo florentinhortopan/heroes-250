@@ -1,0 +1,131 @@
+.ranked-hero-list {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 4rem 1.5rem;
+}
+
+.ranked-hero-list__header {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+}
+.ranked-hero-list__header h3 {
+  color: #ffcc01;
+}
+
+.ranked-hero-list__subtitle {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.ranked-hero-list__rows {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ranked-hero-row {
+  display: grid;
+  grid-template-columns: 48px 80px 1fr 200px;
+  align-items: center;
+  gap: 1rem;
+  background: #232323;
+  border: 1px solid #333;
+  padding: 1rem 1.25rem;
+}
+
+.ranked-hero-row__rank {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffcc01;
+}
+
+.ranked-hero-row__img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #111;
+}
+
+.ranked-hero-row__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ranked-hero-row__meta {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+.ranked-hero-row__shared {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ranked-hero-row__chip {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 204, 1, 0.12);
+  color: #ffcc01;
+  border: 1px solid rgba(255, 204, 1, 0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.ranked-hero-row__score {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ranked-hero-row__bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ranked-hero-row__bar-fill {
+  height: 100%;
+  background: #ffcc01;
+  transition: width 600ms ease-out;
+}
+
+.ranked-hero-row__percent {
+  font-weight: 600;
+  min-width: 3.25rem;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .ranked-hero-list {
+    padding: 2.5rem 1rem;
+  }
+  .ranked-hero-row {
+    grid-template-columns: 36px 60px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+  .ranked-hero-row__img {
+    width: 60px;
+    height: 60px;
+  }
+  .ranked-hero-row__name {
+    font-size: 1rem;
+  }
+  .ranked-hero-row__score {
+    grid-column: 1 / -1;
+  }
+}

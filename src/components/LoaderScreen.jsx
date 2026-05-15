@@ -7,15 +7,22 @@ function toTitleCase(str) {
   return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 }
 
+const FADE_OUT_MS = 900;
+
 const LoaderScreen = ({ labels = [], onComplete, pulseDuration = 700 }) => {
   // stages: 'analyzing', 'showStrengths', 'finding', 'done'
   const [stage, setStage] = useState('analyzing');
   const [activeIndex, setActiveIndex] = useState(-1);
+  // Driven by stage='finding' end-of-cycle; gates the slow fade-out before
+  // we tell the parent we're done so the handoff to the results page is
+  // a continuous fade-out -> fade-in rather than a hard cut.
+  const [fadingOut, setFadingOut] = useState(false);
 
   // Stage 1: Show only the text and bouncing dots for 2s
   useEffect(() => {
     setStage('analyzing');
     setActiveIndex(-1);
+    setFadingOut(false);
     const t = setTimeout(() => setStage('showStrengths'), 2000);
     return () => clearTimeout(t);
   }, [labels]);
@@ -44,18 +51,29 @@ const LoaderScreen = ({ labels = [], onComplete, pulseDuration = 700 }) => {
     // eslint-disable-next-line
   }, [stage, labels, pulseDuration]);
 
-  // Stage 3: Show 'Finding your hero' with progress bar (duration 2600ms), then complete
+  // Stage 3: Show 'Finding your hero' with bouncing dots, then trigger the
+  // fade-out. We split the work in two effects so the fade animation has a
+  // clean lifecycle and we can cancel cleanly on unmount.
   useEffect(() => {
     if (stage !== 'finding') return;
+    const t = setTimeout(() => setFadingOut(true), 2600);
+    return () => clearTimeout(t);
+  }, [stage]);
+
+  // Once fade-out is in flight, wait for it to finish before telling the
+  // parent we're done; the parent will then mount the results content,
+  // which fades in on top of the now-empty space.
+  useEffect(() => {
+    if (!fadingOut) return;
     const t = setTimeout(() => {
       setStage('done');
       if (onComplete) onComplete();
-    }, 2600);
+    }, FADE_OUT_MS);
     return () => clearTimeout(t);
-  }, [stage, onComplete]);
+  }, [fadingOut, onComplete]);
 
   return (
-    <div className="loader-screen">
+    <div className={`loader-screen ${fadingOut ? 'loader-screen--leaving' : 'loader-screen--entering'}`}>
       {(stage === 'analyzing' || stage === 'showStrengths') && (
         <div className={`loader-analyzing-block slide-up${stage === 'showStrengths' ? ' show-strengths' : ''}`}>
           <div className="loader-stage-text fade-in pulse">Analyzing your strengths</div>

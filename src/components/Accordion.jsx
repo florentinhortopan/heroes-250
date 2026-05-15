@@ -5,7 +5,13 @@ const Accordion = ({ items }) => {
   return (
     <div className="accordion-list">
       {items.map((item, idx) => (
-        <details className="accordion bg-tan" key={idx} data-component="accordion" data-state="closed">
+        <details
+          className="accordion bg-tan"
+          key={idx}
+          data-component="accordion"
+          data-state={item.defaultOpen ? 'open' : 'closed'}
+          open={!!item.defaultOpen}
+        >
           <summary className="accordion__summary">
             <span className="accordion__icon-right">
               <div className="icon w-[20px] h-[20px]">

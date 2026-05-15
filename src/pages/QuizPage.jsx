@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import useTypewriter from '../hooks/useTypewriter';
-import { useNavigate, useParams } from 'react-router-dom';
-import quizData from '../data/quiz_data.json';
+import { useNavigate } from 'react-router-dom';
+import quizFallback from '../data/quiz_data.json';
+import heroData from '../data/hero_data.json';
+import { computeSnapshot } from '../lib/scoring';
 import { QuizContext } from '../state/QuizContext';
 import './Quiz.css';
 
@@ -9,8 +11,51 @@ import Q1 from '../../public/assets/Q1.jpg';
 import Q2 from '../../public/assets/Q2.jpg';
 import Q3 from '../../public/assets/Q3.jpg';
 import Q4 from '../../public/assets/Q4.jpg';
+import Q5 from '../../public/assets/army-career-match-searching_lg.jpg';
+import Q6 from '../../public/assets/army-career-match-doctors_lg.jpg';
+import Q7 from '../../public/assets/army-career-match-programing_lg.jpg';
 
-const quizBackgrounds = [Q1, Q2, Q3, Q4];
+const quizBackgrounds = [Q1, Q2, Q3, Q4, Q5, Q6, Q7];
+
+// Quiz length is configurable so we can A/B test shorter flows. Resolution
+// order (highest priority first):
+//   1. URL query param  ->  /quiz?length=3   (great for ad-hoc testing)
+//   2. sessionStorage   ->  persists across in-session navigations / retakes
+//   3. Vite env var     ->  VITE_QUIZ_LENGTH (deployment-level default)
+//   4. Hardcoded 6      ->  product default
+// Setting MIN == MAX disables the server's early-stop, so every quiz lands
+// on exactly the chosen length and the breadcrumb progression stays honest.
+const QUIZ_LENGTH_DEFAULT = 6;
+const MIN_QUIZ_LENGTH = 3;
+const MAX_QUIZ_LENGTH = 10;
+const QUIZ_LENGTH_STORAGE_KEY = 'quizLength';
+
+function clampLength(n) {
+  if (!Number.isFinite(n)) return null;
+  if (n < MIN_QUIZ_LENGTH || n > MAX_QUIZ_LENGTH) return null;
+  return Math.floor(n);
+}
+
+function readQuizLength() {
+  if (typeof window === 'undefined') return QUIZ_LENGTH_DEFAULT;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = clampLength(parseInt(params.get('length') || '', 10));
+    if (fromUrl) {
+      window.sessionStorage?.setItem(QUIZ_LENGTH_STORAGE_KEY, String(fromUrl));
+      return fromUrl;
+    }
+    const fromSession = clampLength(
+      parseInt(window.sessionStorage?.getItem(QUIZ_LENGTH_STORAGE_KEY) || '', 10),
+    );
+    if (fromSession) return fromSession;
+  } catch {
+    // sessionStorage / URL access can throw in some embedded contexts; fall through.
+  }
+  const fromEnv = clampLength(parseInt(import.meta.env?.VITE_QUIZ_LENGTH || '', 10));
+  if (fromEnv) return fromEnv;
+  return QUIZ_LENGTH_DEFAULT;
+}
 
 const ArrowLeftSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className="injected-svg" role="img" style={{height: '100%', width: '100%'}}>
@@ -27,94 +72,279 @@ const CheckMarkSVG = () => (
   </svg>
 );
 
+function fallbackQuestion(historyLength) {
+  // First static question as a graceful fallback if the API call fails.
+  const fb = quizFallback.questions[Math.min(historyLength, quizFallback.questions.length - 1)];
+  if (!fb) return null;
+  return {
+    question: fb.question,
+    options: fb.options.map((o) => ({ id: o.id, text: o.text, keyword: o.keyword.id })),
+  };
+}
+
 const QuizPage = () => {
-  const { questionId } = useParams();
-  // Fade effect removed
   const navigate = useNavigate();
-  const { userAnswers, setUserAnswers } = useContext(QuizContext);
-  const questionIndex = parseInt(questionId, 10) - 1;
-  const question = quizData.questions[questionIndex];
+  const {
+    history,
+    setHistory,
+    current,
+    setCurrent,
+    done,
+    setDone,
+    loadingNext,
+    setLoadingNext,
+    quizError,
+    setQuizError,
+    resetQuiz,
+    seenQuestions,
+    setSeenQuestions,
+    seenOptions,
+    setSeenOptions,
+    seenScenarios,
+    setSeenScenarios,
+  } = useContext(QuizContext);
 
-  // Fade effect removed
+  const [selectedOptionId, setSelectedOptionId] = useState(null);
+  const [exiting, setExiting] = useState(false);
+  const [optionsReady, setOptionsReady] = useState(false);
+  const inFlight = useRef(false);
+  const advanceTimerRef = useRef(null);
+  const AUTO_ADVANCE_MS = 550;
+  const EXIT_FADE_MS = 900;
+  const QUESTION_HOLD_MS = 950;
 
-  if (!question) return <div>Question not found.</div>;
+  // Resolve once per mount so query-param toggles are honored on entry but
+  // don't drift mid-quiz if the URL changes for any reason.
+  const QUIZ_LENGTH = useMemo(readQuizLength, []);
+  const MIN_QUESTIONS = QUIZ_LENGTH;
+  const MAX_QUESTIONS = QUIZ_LENGTH;
 
-  // Typewriter effect for question text
-  const typedQuestion = useTypewriter(question.question, 30);
-
-
-  const handleSelect = (option) => {
-    setUserAnswers({ ...userAnswers, [question.id]: option });
+  const cancelAutoAdvance = () => {
+    if (advanceTimerRef.current) {
+      clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
   };
 
-  const handleNext = () => {
-    if (questionIndex + 1 < quizData.questions.length) {
-      navigate(`/quiz/${questionIndex + 2}`);
-    } else {
-      navigate('/results');
+  useEffect(() => () => cancelAutoAdvance(), []);
+
+  const fetchNext = async (currentHistory) => {
+    if (inFlight.current) return;
+    inFlight.current = true;
+    setLoadingNext(true);
+    setQuizError(null);
+    try {
+      const snapshot = computeSnapshot(currentHistory, heroData.heroes);
+      const lastEntry = currentHistory[currentHistory.length - 1] || null;
+      const res = await fetch('/api/next-question', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          // Trim history to the signal the model needs; the snapshot already
+          // carries the running tally and hero scoreboard.
+          history: currentHistory.map(({ answerText, keyword }) => ({ answerText, keyword })),
+          lastQuestion: lastEntry?.question || null,
+          snapshot,
+          // Guardrails against repeating questions or option texts within the
+          // same session, including options the user did NOT pick.
+          seenQuestions,
+          seenOptions,
+          // Scenario frames already used (challenge, group, change, ...). The
+          // server picks a fresh one each call so the conversation walks the
+          // user through different life contexts, not five variants of the
+          // same prompt.
+          seenScenarios,
+          minQuestions: MIN_QUESTIONS,
+          maxQuestions: MAX_QUESTIONS,
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const hasContent =
+        data && data.question && Array.isArray(data.options) && data.options.length >= 4;
+      if (data.done) {
+        setDone(true);
+        setCurrent(null);
+      } else if (!hasContent) {
+        // The server is supposed to always return a question (the LLM was
+        // asked to set done=false), but if every LLM retry returned empty
+        // we'd rather give the user a real static question than an empty
+        // screen. Fall through to the static fallback path.
+        throw new Error('Empty response from /api/next-question');
+      } else {
+        setCurrent({ question: data.question, options: data.options });
+        setSelectedOptionId(null);
+        if (data.question) setSeenQuestions((prev) => [...prev, data.question]);
+        if (Array.isArray(data.options) && data.options.length) {
+          setSeenOptions((prev) => [...prev, ...data.options.map((o) => o.text)]);
+        }
+        if (data.scenario) setSeenScenarios((prev) => [...prev, data.scenario]);
+      }
+    } catch (err) {
+      console.warn('next-question failed, using fallback', err);
+      setQuizError(err?.message || 'Unable to reach quiz API');
+      const fb = fallbackQuestion(currentHistory.length);
+      if (fb) {
+        setCurrent(fb);
+        setSelectedOptionId(null);
+        if (fb.question) setSeenQuestions((prev) => [...prev, fb.question]);
+        if (Array.isArray(fb.options) && fb.options.length) {
+          setSeenOptions((prev) => [...prev, ...fb.options.map((o) => o.text)]);
+        }
+      } else {
+        setDone(true);
+      }
+    } finally {
+      setLoadingNext(false);
+      inFlight.current = false;
     }
+  };
+
+  useEffect(() => {
+    if (history.length === 0 && !current && !done) {
+      fetchNext([]);
+    }
+  }, [history.length, current, done]);
+
+  useEffect(() => {
+    if (done && history.length > 0) {
+      setExiting(true);
+      const t = setTimeout(() => navigate('/results'), EXIT_FADE_MS);
+      return () => clearTimeout(t);
+    }
+  }, [done, history.length, navigate]);
+
+  // Choreograph the reveal: when a new question lands, hold the answer
+  // buttons behind skeleton placeholders for a moment so the question text
+  // can land first (legend fades in + typewriter starts).
+  useEffect(() => {
+    setOptionsReady(false);
+    if (!current || loadingNext) return;
+    const t = setTimeout(() => setOptionsReady(true), QUESTION_HOLD_MS);
+    return () => clearTimeout(t);
+  }, [current, loadingNext]);
+
+  const typedQuestion = useTypewriter(current?.question || '', 30);
+
+  const advanceWith = (chosen) => {
+    cancelAutoAdvance();
+    if (!current || !chosen) return;
+    const nextHistory = [
+      ...history,
+      {
+        question: current.question,
+        answerText: chosen.text,
+        keyword: chosen.keyword,
+        optionId: chosen.id,
+      },
+    ];
+    setHistory(nextHistory);
+    setCurrent(null);
+    setSelectedOptionId(null);
+    fetchNext(nextHistory);
+  };
+
+  const handleSelect = (opt) => {
+    cancelAutoAdvance();
+    setSelectedOptionId(opt.id);
+    advanceTimerRef.current = setTimeout(() => advanceWith(opt), AUTO_ADVANCE_MS);
   };
 
   const handleBack = () => {
-    if (questionIndex > 0) {
-      navigate(`/quiz/${questionIndex}`);
-    } else {
+    cancelAutoAdvance();
+    if (history.length === 0) {
+      resetQuiz();
       navigate('/');
+      return;
     }
+    const prev = history[history.length - 1];
+    const newHistory = history.slice(0, -1);
+    setHistory(newHistory);
+    setSelectedOptionId(prev?.optionId || null);
+    setCurrent({
+      question: prev.question,
+      options: [{ id: prev.optionId, text: prev.answerText, keyword: prev.keyword }],
+    });
+    fetchNext(newHistory);
   };
 
-  const selectedId = userAnswers[question.id]?.id;
+  const currentBgIndex = history.length % quizBackgrounds.length;
+  const progressTotal = MAX_QUESTIONS;
+  const progressIndex = Math.min(history.length + 1, MAX_QUESTIONS);
 
-
-  const bgImage = quizBackgrounds[questionIndex] || quizBackgrounds[0];
+  const showLoader = (loadingNext && !current) || (!current && !done);
+  const showOptions = !showLoader && current && optionsReady;
+  // Scoped key on the legend so the typewriter + fade-in replay on phase
+  // change, but the surrounding layout stays mounted to avoid layout shifts.
+  const legendKey = `legend-${history.length}-${showLoader ? 'l' : 'q'}`;
 
   return (
-    <div className="q" data-loading-type="dynamic" data-component="Quiz" data-component-family="CMT">
-      <div className="q-bg" style={{backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat'}}></div>
-      <fieldset className="q-flex" key={questionId}>
+    <div className={`q ${exiting ? 'q--exiting' : ''}`} data-loading-type="dynamic" data-component="Quiz" data-component-family="CMT">
+      <div className="q-bg-stack" aria-hidden="true">
+        {quizBackgrounds.map((img, i) => (
+          <div
+            key={i}
+            className="q-bg-layer"
+            style={{ backgroundImage: `url(${img})`, opacity: i === currentBgIndex ? 1 : 0 }}
+          />
+        ))}
+      </div>
+      <fieldset className="q-flex">
         <div className="q-question">
           <a className="q-back" onClick={handleBack} aria-label="Go back" style={{cursor: 'pointer'}}>
             <div className="icon q-svg"><ArrowLeftSVG /></div>
-            <span aria-hidden="true" className="t5">{questionIndex + 1} / {quizData.questions.length}</span>
           </a>
-          <legend className="t3" style={{opacity: 1}}>{typedQuestion}</legend>
+          <div
+            className="q-progress"
+            role="progressbar"
+            aria-valuemin={1}
+            aria-valuemax={progressTotal}
+            aria-valuenow={progressIndex}
+            aria-label={`Question ${progressIndex} of ${progressTotal}`}
+          >
+            {Array.from({ length: progressTotal }).map((_, i) => {
+              const pos = i + 1;
+              const state =
+                pos < progressIndex ? 'done' : pos === progressIndex ? 'current' : 'upcoming';
+              return (
+                <span
+                  key={i}
+                  className={`q-progress__seg q-progress__seg--${state}`}
+                  aria-hidden="true"
+                />
+              );
+            })}
+          </div>
+          <legend className="t3 q-legend" key={legendKey} style={{opacity: 1}}>
+            {showLoader ? (
+              <span style={{opacity: 0.7}}>
+                {history.length === 0
+                  ? 'Setting the stage for your first question…'
+                  : 'Tailoring your next question…'}
+              </span>
+            ) : (
+              typedQuestion
+            )}
+          </legend>
+          {quizError && (
+            <p className="caption" style={{color: '#ffcc01', marginTop: 8, opacity: 0.8}}>
+              (Using fallback question — couldn't reach AI: {quizError})
+            </p>
+          )}
         </div>
         <div className="q-choice">
-          {question.options.map((opt) => (
+          {showOptions && current.options.map((opt, i) => (
             <button
               key={opt.id}
-              className={`q-button caption${selectedId === opt.id ? ' q-active' : ''}`}
-              aria-pressed={selectedId === opt.id}
+              className={`q-button caption${selectedOptionId === opt.id ? ' q-active' : ''}`}
+              aria-pressed={selectedOptionId === opt.id}
               onClick={() => handleSelect(opt)}
-              style={{pointerEvents: 'auto', opacity: 1}}
+              style={{ '--stagger': i }}
             >
               <span>{opt.text}</span>
-              <div className="icon q-circle">{selectedId === opt.id && <CheckMarkSVG />}</div>
+              <div className="icon q-circle">{selectedOptionId === opt.id && <CheckMarkSVG />}</div>
             </button>
           ))}
-          <button
-            className="q-next-btn"
-            style={{
-              marginTop: 32,
-              alignSelf: 'flex-end',
-              background: 'none',
-              border: 'none',
-              color: '#ffcc01',
-              fontSize: 20,
-              fontWeight: 500,
-              display: 'flex',
-              alignItems: 'center',
-              cursor: selectedId ? 'pointer' : 'not-allowed',
-              opacity: selectedId ? 1 : 0.5,
-              pointerEvents: selectedId ? 'auto' : 'none',
-              padding: 0
-            }}
-            onClick={handleNext}
-            disabled={!selectedId}
-          >
-            Next
-            <svg style={{marginLeft: 8}} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><title>arrow-right</title><path d="M18.5519 23.3171L25.3289 16.0001L18.5519 8.68311L17.2829 9.87111L22.2509 15.1901L6.67188 15.1901L6.67188 16.8371L22.2509 16.8371L17.2829 22.1561L18.5519 23.3171Z" fill="#ffcc01"></path></svg>
-          </button>
         </div>
       </fieldset>
     </div>

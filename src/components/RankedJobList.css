@@ -1,0 +1,53 @@
+.ranked-job-list {
+  background: #f1e4c7;
+  color: #221F20;
+  padding: 4rem 1.5rem;
+}
+
+.ranked-job-list__header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.ranked-job-list__subtitle {
+  color: #4a4a4a;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.ranked-job-list__loading {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #555;
+  padding: 3rem 0;
+}
+
+.ranked-job-list__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(284px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.ranked-job-list__grid > li.ranked-job-card {
+  display: flex;
+}
+
+.ranked-job-list__grid > li.ranked-job-card > .card.job-card {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .ranked-job-list {
+    padding: 2.5rem 1rem;
+  }
+  .ranked-job-list__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -148,6 +148,27 @@
   font-size: 54px;
   font-weight: 530;
   margin-top: 0;
+  line-height: 1.05;
+}
+@media (max-width: 767px) {
+  .hero-secondary .column-right .hero-heading {
+    font-size: 32px;
+  }
+  .hero.hero-secondary {
+    padding: 14px;
+    row-gap: 1.5rem;
+  }
+}
+
+/* Two render slots for SoldierDetail: column-left (desktop) and inline-mobile slot. */
+.hero-secondary .soldier-mobile-slot { display: none; }
+@media (max-width: 1023px) {
+  .hero-secondary .column-left      { display: none; }
+  .hero-secondary .soldier-mobile-slot {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0 1.5rem;
+  }
 }
 .hero-secondary .column-left p {
   margin-bottom: 10px;

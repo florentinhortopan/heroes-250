@@ -4,28 +4,26 @@ import jobData from '../data/job_data.json';
 import keywordsData from '../data/keywords.json';
 import JobCard from '../components/JobCard';
 
+const CareerPath = ({ hero, job: jobProp }) => {
+  if (!hero) return null;
 
-const CareerPath = ({ hero }) => {
-  if (!hero || !Array.isArray(jobData)) return null;
-  const job = jobData.find((j) => j.moscode === hero.matched_mos);
+  // Prefer the LLM-picked top job; fall back to hero.matched_mos if not provided yet.
+  let job = jobProp || null;
+  if (!job && Array.isArray(jobData)) {
+    job = jobData.find((j) => j.moscode === hero.matched_mos) || null;
+  }
 
-  // Find a matched keyword between hero and user (assuming hero.shared is available)
-  // For this context, use the first keyword from hero.keywords
   const heroKeywordIds = hero.keywords?.map((k) => k.id) || [];
   const keywordOption = keywordsData.keyword_options.find((k) => heroKeywordIds.includes(k.id));
   const keywordLabel = keywordOption ? keywordOption.label : 'characteristics';
   const keywordId = keywordOption ? keywordOption.id : null;
 
-  // Get career category info from keywords.json using job.category
   let careerCategoryLabel = '';
   let careerCategoryCopy = '';
   if (job && job.category && keywordsData.career_category[job.category]) {
     careerCategoryLabel = keywordsData.career_category[job.category].label;
     careerCategoryCopy = keywordsData.career_category[job.category].copy;
   }
-
-  // Use hero's first name for the Gregg reference
-  const heroFirstName = hero.name?.split(' ')[0] || hero.name || 'your hero';
 
   return (
     <section className="career-path-section">
@@ -40,11 +38,22 @@ const CareerPath = ({ hero }) => {
         </div>
         <h4>Explore a career in <span className="career-category">{careerCategoryLabel}</span></h4>
         <div className="career-path-job-card">
-          {job ? <JobCard job={job} /> : null}
+          {job ? <JobCard job={normalizeJobForCard(job)} /> : null}
         </div>
       </div>
     </section>
   );
 };
+
+// JobCard expects the legacy schema (mos_title, moscode, mos_description_short, category, url_path_legacy).
+// The trimmed summary uses `url` instead. Normalize so either shape works.
+function normalizeJobForCard(job) {
+  if (!job) return null;
+  if (job.url_path_legacy) return job;
+  return {
+    ...job,
+    url_path_legacy: job.url || job.url_path_legacy || '',
+  };
+}
 
 export default CareerPath;

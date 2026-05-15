@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/quiz/:questionId" element={<QuizPage />} />
+          <Route path="/quiz" element={<QuizPage />} />
           <Route path="/results" element={<ResultsPage />} />
         </Routes>
       </Router>

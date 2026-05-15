@@ -1,101 +1,182 @@
-
-
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useMemo, useRef } from 'react';
 import LoaderScreen from '../components/LoaderScreen';
 import { QuizContext } from '../state/QuizContext';
 import heroData from '../data/hero_data.json';
 import keywordsData from '../data/keywords.json';
-import { useNavigate } from 'react-router-dom';
+import mosSummary from '../data/mos_summary.json';
 import HeroMatch from '../components/HeroMatch';
-import SoldierDetail from '../components/SoldierDetail';
 import CareerPath from '../components/CareerPath';
+import RankedHeroList from '../components/RankedHeroList';
+import RankedJobList from '../components/RankedJobList';
+import { buildKeywordVector, scoreHeroes, pickTopHeroWithJitter } from '../lib/scoring';
+
+const keywordLabelMap = Object.fromEntries(
+  (keywordsData.keyword_options || []).map((k) => [k.id, k.label]),
+);
+
+const mosByCode = Object.fromEntries(
+  (Array.isArray(mosSummary) ? mosSummary : []).map((m) => [m.moscode, m]),
+);
+
+function findMos(moscode) {
+  return mosByCode[moscode] || null;
+}
 
 const ResultsPage = () => {
-  const { userAnswers, setUserAnswers } = useContext(QuizContext);
-  const navigate = useNavigate();
+  const { history, userAnswers } = useContext(QuizContext);
 
-  // Collect all selected keyword ids from user answers
-  const userKeywordIds = Object.values(userAnswers)
-    .map((ans) => ans.keyword?.id)
-    .filter(Boolean);
+  const userVec = useMemo(() => buildKeywordVector(userAnswers), [userAnswers]);
+  const rankedHeroes = useMemo(() => scoreHeroes(userVec, heroData.heroes), [userVec]);
+  const topHeroRow = useMemo(() => pickTopHeroWithJitter(rankedHeroes), [rankedHeroes]);
+  const topHero = topHeroRow?.hero;
+  const topShared = topHeroRow?.shared || [];
 
-  // Find all heroes with the most keyword overlap, then pick one at random if tied
-  let bestHeroes = [];
-  let bestMatchCount = 0;
-  let bestShared = [];
-
-  heroData.heroes.forEach((hero) => {
-    const heroKeywordIds = hero.keywords.map((k) => k.id);
-    const shared = userKeywordIds.filter((id) => heroKeywordIds.includes(id));
-    if (shared.length > bestMatchCount) {
-      bestHeroes = [{ hero, shared }];
-      bestMatchCount = shared.length;
-    } else if (shared.length === bestMatchCount && bestMatchCount > 0) {
-      bestHeroes.push({ hero, shared });
-    }
-  });
-
-  useEffect(() => {
-    // Log all heroes with their match counts
-    console.log('User keyword IDs:', userKeywordIds);
-    heroData.heroes.forEach((hero) => {
-      const heroKeywordIds = hero.keywords.map((k) => k.id);
-      const shared = userKeywordIds.filter((id) => heroKeywordIds.includes(id));
-      console.log(`Hero: ${hero.name} (${hero.id}) - Match count: ${shared.length}, Shared:`, shared);
-    });
-
-    // Log the best-matching heroes (including ties)
-    if (bestHeroes.length > 0) {
-      console.log('Best-matching heroes (highest match count):');
-      bestHeroes.forEach(({ hero, shared }) => {
-        console.log(`  ${hero.name} (${hero.id}) - Shared:`, shared);
-      });
-    } else {
-      console.log('No hero matches found.');
-    }
-    // Only run on mount
-    // eslint-disable-next-line
-  }, []);
-
-  let bestHero = null;
-  if (bestHeroes.length === 1) {
-    bestHero = bestHeroes[0].hero;
-    bestShared = bestHeroes[0].shared;
-  } else if (bestHeroes.length > 1) {
-    const picked = bestHeroes[Math.floor(Math.random() * bestHeroes.length)];
-    bestHero = picked.hero;
-    bestShared = picked.shared;
-  }
-
-  // Map keyword ids to labels for display
-  const keywordLabelMap = Object.fromEntries(
-    (keywordsData.keyword_options || []).map((k) => [k.id, k.label])
+  const userKeywordLabels = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          Object.keys(userVec.tallies)
+            .map((id) => keywordLabelMap[id])
+            .filter(Boolean),
+        ),
+      ),
+    [userVec],
   );
-  // Only show each keyword label once
-  const userKeywordLabels = Array.from(new Set(userKeywordIds.map((id) => keywordLabelMap[id]).filter(Boolean)));
 
   const [showLoader, setShowLoader] = useState(true);
+  const [rankedJobs, setRankedJobs] = useState(null);
+  const [rankingError, setRankingError] = useState(null);
+  const [narrative, setNarrative] = useState(null);
+
+  const calledRef = useRef(false);
+
+  useEffect(() => {
+    if (calledRef.current) return;
+    if (!topHero) return;
+    calledRef.current = true;
+
+    const userProfile = {
+      keywordTallies: userVec.tallies,
+      dominantKeywords: Object.entries(userVec.tallies)
+        .sort((a, b) => b[1] - a[1])
+        .map(([k]) => k),
+      answers: history.map((h) => ({
+        question: h.question,
+        answerText: h.answerText,
+        keyword: h.keyword,
+      })),
+      topHero: {
+        id: topHero.id,
+        name: topHero.name,
+        keywords: topHero.keywords?.map((k) => k.id) || [],
+      },
+    };
+
+    // Fire both calls in parallel.
+    fetch('/api/rank-jobs', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ userProfile, catalog: mosSummary }),
+    })
+      .then(async (r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data) => setRankedJobs(data.ranked || []))
+      .catch((err) => {
+        console.warn('rank-jobs failed', err);
+        setRankingError(err?.message || 'Job ranker unavailable');
+        setRankedJobs([]);
+      });
+
+    const sharedKeywords = topShared.map((id) => ({ id, label: keywordLabelMap[id] || id }));
+
+    fetch('/api/hero-narrative', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        hero: {
+          name: topHero.name,
+          rank: topHero.rank,
+          keywords: topHero.keywords?.map((k) => k.id) || [],
+          achievement: topHero.achievement,
+          medium_bio: topHero.medium_bio,
+          conflict: topHero.conflict,
+          time_period: topHero.time_period,
+        },
+        userAnswers: history.map((h) => ({
+          question: h.question,
+          answerText: h.answerText,
+          keyword: h.keyword,
+        })),
+        sharedKeywords,
+      }),
+    })
+      .then(async (r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data) => setNarrative(data))
+      .catch((err) => {
+        console.warn('hero-narrative failed', err);
+        setNarrative(null);
+      });
+  }, [topHero, topShared, userVec, history]);
+
+  // Enrich the LLM-returned ranked jobs with full MOS info (title, category, url).
+  const enrichedJobs = useMemo(() => {
+    if (!Array.isArray(rankedJobs)) return [];
+    const maxScore = rankedJobs.reduce((m, r) => Math.max(m, r.score || 0), 0) || 1;
+    return rankedJobs
+      .map((row) => {
+        const full = findMos(row.moscode);
+        if (!full) return null;
+        return {
+          moscode: full.moscode,
+          mos_title: full.mos_title,
+          category: full.category,
+          group: full.group,
+          score01: (row.score || 0) / maxScore,
+          percent: Math.round(((row.score || 0) / maxScore) * 100),
+          reason: row.reason,
+          url: full.url || '',
+          full,
+        };
+      })
+      .filter(Boolean);
+  }, [rankedJobs]);
+
+  const topJob = enrichedJobs[0]?.full || null;
+  const otherJobs = enrichedJobs.slice(1, 10);
+  const otherHeroes = rankedHeroes.filter((r) => r.hero.id !== topHero?.id).slice(0, 8);
 
   if (showLoader) {
     return (
-      <LoaderScreen
-        labels={userKeywordLabels}
-        onComplete={() => setShowLoader(false)}
-      />
+      <LoaderScreen labels={userKeywordLabels} onComplete={() => setShowLoader(false)} />
     );
   }
 
+  if (!topHero) {
+    return <p>You're unique! None of the heroes from history match your profile. Try the quiz again!</p>;
+  }
+
   return (
-    <div className="results-page">
-      {bestHero ? (
-        <>
-          <HeroMatch hero={bestHero} sharedQualities={[...new Set(bestShared)]} keywordLabelMap={keywordLabelMap} userKeywordIds={userKeywordIds} />
-          {/* Career Path Section */}
-          <CareerPath bestHero={bestHero} />
-        </>
-      ) : (
-        <p>You're unique! None of the heroes from history match your profile. Try the quiz again!</p>
+    <div className="results-page results-page-fade-in">
+      <HeroMatch
+        hero={topHero}
+        sharedQualities={[...new Set(topShared)]}
+        keywordLabelMap={keywordLabelMap}
+        userKeywordIds={Object.keys(userVec.tallies)}
+        narrative={narrative}
+        topJob={topJob}
+      />
+      {rankingError && (
+        <div style={{ background: '#1a1a1a', color: '#ffcc01', textAlign: 'center', padding: '1rem' }}>
+          AI job ranker unavailable: {rankingError}. Showing the historical match only.
+        </div>
       )}
+      <RankedJobList ranked={otherJobs} loading={rankedJobs === null} />
+      <RankedHeroList ranked={otherHeroes} keywordLabelMap={keywordLabelMap} />
     </div>
   );
 };

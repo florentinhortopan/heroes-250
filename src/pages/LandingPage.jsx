@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { QuizContext } from '../state/QuizContext';
 import './LandingPage.css';
 
-const LandingPage = () => (
+const LandingPage = () => {
+  const navigate = useNavigate();
+  const { resetQuiz } = useContext(QuizContext);
+  const handleStart = (e) => {
+    e.preventDefault();
+    resetQuiz();
+    navigate('/quiz');
+  };
+  return (
   <div className="secondarycallout image aem-GridColumn aem-GridColumn--default--12">
     <div className="bg-green">
       <section
@@ -24,7 +33,7 @@ const LandingPage = () => (
             </div>
           </div>
             <div className="cta-block">
-              <Link to="/quiz/1" className="cta-primary">
+              <a href="/quiz" className="cta-primary" onClick={handleStart}>
                 <span className="cta-primary-text">FIND YOUR HERO</span>
                 <span className="cta-primary-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
@@ -32,7 +41,7 @@ const LandingPage = () => (
                     <path d="M18.9269 23.3166L25.7039 15.9996L18.9269 8.68262L17.6579 9.87062L22.6259 15.1896H7.04688V16.8366H22.6259L17.6579 22.1556L18.9269 23.3166Z" fill="#FFCC01"></path>
                   </svg>
                 </span>
-              </Link>
+              </a>
             </div>
         </div>
         <div className="column-right w-full desktop:w-1/2">
@@ -46,6 +55,7 @@ const LandingPage = () => (
       </section>
     </div>
   </div>
-);
+  );
+};
 
 export default LandingPage;

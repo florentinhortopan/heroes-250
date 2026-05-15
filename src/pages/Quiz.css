@@ -1,9 +1,10 @@
 .q {
     position: relative;
     display: grid;
-    min-height: auto;
+    min-height: 100svh;
     overflow: visible;
     padding: 18px;
+    box-sizing: border-box;
     --tw-text-opacity: 1;
     color: rgb(255 204 1 / var(--tw-text-opacity, 1))
 }
@@ -22,6 +23,60 @@
     transition-duration: 0.1s;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     background: #221F20;
+}
+
+/* --- Quiz background crossfade stack --- */
+.q-bg-stack {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #221F20;
+}
+.q-bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1100ms ease-in-out;
+    will-change: opacity;
+}
+.q-bg-stack::after {
+    /* Subtle vignette overlay so text stays readable across photos */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none;
+}
+
+/* --- Quiz entrance: fieldset fades up once on initial page mount --- */
+.q-flex {
+    animation: q-step-in 560ms cubic-bezier(.22, .61, .36, 1) both;
+}
+@keyframes q-step-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* The legend re-plays this animation each time it remounts (phase change). */
+.q-legend {
+    animation: q-step-in 500ms cubic-bezier(.22, .61, .36, 1) both;
+}
+
+/* --- Quiz exit fade before navigating to results ---
+   Slow, cinematic fade so the handoff to the "Analyzing your strengths"
+   loader feels like a single continuous transition. Duration here must
+   match EXIT_FADE_MS in QuizPage.jsx. */
+.q {
+    transition: opacity 900ms cubic-bezier(.22, .61, .36, 1),
+                filter   900ms cubic-bezier(.22, .61, .36, 1);
+}
+.q.q--exiting {
+    opacity: 0;
+    filter: blur(6px);
+    pointer-events: none;
 }
 
 .quiz-bg {
@@ -56,6 +111,43 @@
 .q-back .q-svg { margin-right: 18px }
 .q-svg { height: 32px; width: 32px }
 .q-svg svg path { fill: #ffcc01 }
+
+/* --- Breadcrumb progress indicator ---
+   Six small segments next to the back arrow showing how far the user is
+   through the fixed-length quiz. The current segment is taller and glows
+   so it's easy to track at a glance. */
+.q-progress {
+    position: absolute;
+    top: 0;
+    left: 56px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+.q-progress__seg {
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 204, 1, 0.22);
+    transform-origin: center;
+    transition: background 520ms cubic-bezier(.22, .61, .36, 1),
+                transform  320ms cubic-bezier(.22, .61, .36, 1),
+                box-shadow 520ms cubic-bezier(.22, .61, .36, 1);
+}
+.q-progress__seg--done {
+    background: #ffcc01;
+}
+.q-progress__seg--current {
+    background: #ffcc01;
+    transform: scaleY(1.8);
+    box-shadow: 0 0 12px rgba(255, 204, 1, 0.55);
+}
+@media (max-width: 767px) {
+    .q-progress { left: 48px; gap: 6px; }
+    .q-progress__seg { width: 22px; }
+}
 .q-question,.q-choice { display: flex }
 @media (min-width: 768px) {
     .q-question,.q-choice { height:100%; flex: 1 1 0% }
@@ -68,7 +160,10 @@
     position: relative;
     flex: 1 1 0%;
     flex-direction: column;
-    padding-top: 45px
+    padding-top: 45px;
+    /* Reserve space for the 4-button stack so the layout doesn't collapse
+       while we wait for the question to render. */
+    min-height: 360px;
 }
 @media (min-width: 768px) {
     .q-choice { padding-left:22.5px; padding-top: 217px }
@@ -81,39 +176,90 @@ legend {
     text-align: left;
     line-height: 45px;
 }
+.q-legend {
+    display: block;
+    min-height: calc(3 * 45px); /* three line-heights reserved */
+}
+@media (max-width: 767px) {
+    legend {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .q-legend {
+        min-height: calc(3 * 32px);
+    }
+    .q { padding: 14px; }
+    .q-question { padding-top: 56px; }
+    .q-choice { padding-top: 24px; }
+    .q-button {
+        padding: 14px 16px;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .q-choice {
+        min-height: 280px;
+    }
+}
 
 .q-button {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    border-width: 2px;
-    border-color: rgb(255 255 255 / 1);
-    padding: 18px;
+    gap: 12px;
+    border: 2px solid #ffcc01;
+    padding: 20px 22px;
     text-align: left;
-    font-weight: 500;
-    color: rgb(255 255 255 / 1);
-    opacity: 1;
-    background: none;
+    font-family: 'GI-530', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 530;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    color: #ffcc01;
+    background: transparent;
     cursor: pointer;
-    transition: all .15s cubic-bezier(.4,0,.2,1);
+    box-sizing: border-box;
+    transition: background-color .15s cubic-bezier(.4,0,.2,1),
+                color .15s cubic-bezier(.4,0,.2,1),
+                border-color .15s cubic-bezier(.4,0,.2,1);
+    animation: q-fade-up 460ms cubic-bezier(.22, .61, .36, 1) both;
+    /* The question is already on screen when these mount, so they reveal
+       promptly with a brief stagger. */
+    animation-delay: calc(var(--stagger, 0) * 70ms + 120ms);
 }
-.q-button:hover, .q-button.q-active {
-    background-color: rgb(255 255 255 / 1);
-    color: rgb(34 31 32 / 1);
+@keyframes q-fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
+.q-button:hover {
+    background-color: rgba(255, 204, 1, 0.15);
+}
+.q-button.q-active {
+    background-color: #ffcc01;
+    color: #221F20;
+    /* Border kept at 2px to preserve box dimensions; matches bg so it reads as borderless. */
+    border-color: #ffcc01;
+}
+.q-button.q-active:hover {
+    background-color: #ffcc01;
+    color: #221F20;
+}
+/* The select indicator: always reserves 20px to prevent layout shift on activation. */
 .q-circle {
-    display: none;
+    display: block;
     height: 20px;
-    width: 20px
+    width: 20px;
+    flex: 0 0 20px;
+    visibility: hidden;
 }
 .q-circle svg {
     height: 20px;
     width: 20px;
     border-radius: 100%;
-    background-color: rgb(34 31 32 / 1)
+    background-color: #221F20;
 }
 .q-circle path { stroke: #fff }
-.q-active .q-circle { visibility: visible; display: block }
-.q-active span { flex: .95 }
+.q-active .q-circle { visibility: visible; }
+.q-button > span { flex: 1 1 auto; min-width: 0; }

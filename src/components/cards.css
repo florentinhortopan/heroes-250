@@ -9,6 +9,18 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.card.job-card:hover,
+.card.job-card:focus-visible {
+  background: #fff5dc;
+  box-shadow: 0 4px 0 0 #221F20;
+  transform: translate(-1px, -1px);
+}
+.card.job-card:focus-visible {
+  outline: 2px solid #221F20;
+  outline-offset: 2px;
 }
 
 .card.job-card a {
@@ -49,6 +61,23 @@
   letter-spacing: 0.05em;
   white-space: nowrap;
   margin-left: 1rem;
+}
+.card-header .rank-badge {
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #221F20;
+  letter-spacing: -0.02em;
+}
+.card-header .job-percent {
+  margin-left: auto;
+  margin-right: 1rem;
+  font-family: 'GI-530', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #221F20;
+  letter-spacing: 0.02em;
 }
 .card-content {
   flex: 1 1 auto;
@@ -103,6 +132,37 @@
 }
 .card-footer .save-btn.saved svg {
   fill: #221F20;
+}
+
+@media (max-width: 600px) {
+  .card.job-card {
+    min-width: 0;
+    min-height: auto;
+  }
+  .card-header {
+    min-height: 56px;
+  }
+  .card-header .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .card-header .rank-badge {
+    font-size: 22px;
+  }
+  .card-header .job-group {
+    font-size: 12px;
+    margin-left: 0.75rem;
+  }
+  .card-header .job-percent {
+    font-size: 14px;
+    margin-right: 0.75rem;
+  }
+  .card-content {
+    padding: 1.25rem;
+  }
+  .card-content .job-title {
+    font-size: 1.1rem;
+  }
 }
 /* Remove all link styling */
 .card.job-card a:link,

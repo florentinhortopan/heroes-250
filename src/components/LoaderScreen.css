@@ -150,6 +150,43 @@
   top: 0;
   left: 0;
   z-index: 9999;
+  will-change: opacity, filter;
+}
+
+/* Cinematic fade-in when the loader mounts (right after the quiz exits).
+   The bg flushes in first, then the inner content rides on top. */
+.loader-screen--entering {
+  animation: loader-screen-fade-in 900ms cubic-bezier(.22, .61, .36, 1) both;
+}
+
+/* Slow fade-out before handing control to the results content. The blur
+   adds a soft "lens dissolve" instead of a hard cut. Keep duration in
+   sync with FADE_OUT_MS in LoaderScreen.jsx. */
+.loader-screen--leaving {
+  animation: loader-screen-fade-out 900ms cubic-bezier(.22, .61, .36, 1) both;
+  pointer-events: none;
+}
+
+@keyframes loader-screen-fade-in {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+@keyframes loader-screen-fade-out {
+  from { opacity: 1; filter: blur(0); }
+  to   { opacity: 0; filter: blur(6px); }
+}
+
+/* Results content fades in once the loader has fully faded out. Slightly
+   slower than the loader fade-out so the eye tracks one continuous
+   movement of light across the screen. */
+.results-page-fade-in {
+  animation: results-page-fade-in 1100ms cubic-bezier(.22, .61, .36, 1) both;
+}
+
+@keyframes results-page-fade-in {
+  from { opacity: 0; transform: translateY(8px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0);   filter: blur(0); }
 }
 
 .loader-keywords {
